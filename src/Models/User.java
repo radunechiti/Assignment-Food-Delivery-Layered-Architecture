@@ -2,63 +2,44 @@ package Models;
 
 public class User {
 
-    private int id;
-    private String name;
-    private String surname;
+    private String username;
+    private String pasword;
     private String email;
     private boolean flag;
 
-    public User(int id, String name, String surname, String email, boolean flag)
-    {
-        this.id=id;
-        this.name=name;
-        this.surname=surname;
-        this.email=email;
-        this.flag=flag;
+    public User(String username, String pasword, String email, boolean flag) {
+        this.username = username;
+        this.pasword = pasword;
+        this.email = email;
+        this.flag = flag;
     }
 
-    public User(String name, String surname, String email, boolean flag)
-    {
-        this.name=name;
-        this.surname=surname;
-        this.email=email;
-        this.flag=flag;
+    public String getUsername() {
+        return username;
     }
 
-    public int getId() {
-        return id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getName() {
-        return name;
+    public String getPasword() {
+        return pasword;
     }
 
-    public String getSurname() {
-        return surname;
+    public void setPasword(String pasword) {
+        this.pasword = pasword;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public boolean isFlag() {
-        return flag;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isFlag() {
+        return flag;
     }
 
     public void setFlag(boolean flag) {
