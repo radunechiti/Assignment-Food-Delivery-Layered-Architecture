@@ -3,21 +3,15 @@ package Models;
 public class Order {
 
     private int id;
-    private int quantity;
-    private int id_cos;
-    private int id_product;
+    private String adress;
+    private int total;
+    private int id_user;
 
-    public Order(int id, int quantity, int id_cos, int id_product) {
+    public Order(int id, String adress, int total, int id_user) {
         this.id = id;
-        this.quantity = quantity;
-        this.id_cos = id_cos;
-        this.id_product = id_product;
-    }
-
-    public Order(int quantity, int id_cos, int id_product) {
-        this.quantity = quantity;
-        this.id_cos = id_cos;
-        this.id_product = id_product;
+        this.adress = adress;
+        this.total = total;
+        this.id_user = id_user;
     }
 
     public int getId() {
@@ -28,27 +22,28 @@ public class Order {
         this.id = id;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
-    public int getId_Cos() {
-        return id_cos;
+    public int getTotal() {
+        return total;
     }
 
-    public void setId_Cos(int id_Cos) {
-        this.id_cos = id_Cos;
+    public void setTotal(int total) {
+        this.total = total;
     }
 
-    public int getId_Product() {
-        return id_product;
+    public int getId_user() {
+        return id_user;
     }
 
-    public void setId_Product(int id_Product) {
-        this.id_product = id_Product;
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 }
+

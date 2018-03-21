@@ -2,24 +2,24 @@ package Models;
 
 public class User {
 
-    private String username;
+    private int id;
     private String pasword;
     private String email;
     private boolean flag;
 
-    public User(String username, String pasword, String email, boolean flag) {
-        this.username = username;
+    public User(int id, String pasword, String email, boolean flag) {
+        this.id = id;
         this.pasword = pasword;
         this.email = email;
         this.flag = flag;
     }
 
-    public String getUsername() {
-        return username;
+    public int getId() {
+        return id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPasword() {
