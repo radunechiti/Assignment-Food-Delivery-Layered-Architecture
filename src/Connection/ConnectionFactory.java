@@ -8,11 +8,11 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ConnectionFactory {  //trebuie sa schimb numele dbURL
+public class ConnectionFactory {
 
     private static final Logger LOGGER = Logger.getLogger(ConnectionFactory.class.getName());
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    //private static final String DBURL = "jdbc:mysql://localhost:3306/warehouse?autoReconnect=true&useSSL=false";
+    private static final String DBURL = "jdbc:mysql://localhost:3306/food_delivery?autoReconnect=true&useSSL=false";
     private static final String USER = "root";
     private static final String PASS = "root";
 

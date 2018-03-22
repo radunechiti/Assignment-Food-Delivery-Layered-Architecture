@@ -3,14 +3,16 @@ package Models;
 public class User {
 
     private int id;
-    private String pasword;
+    private String password;
     private String email;
+    private String nume;
     private boolean flag;
 
-    public User(int id, String pasword, String email, boolean flag) {
+    public User(int id, String password, String email, String nume, boolean flag) {
         this.id = id;
-        this.pasword = pasword;
+        this.password = password;
         this.email = email;
+        this.nume = nume;
         this.flag = flag;
     }
 
@@ -22,12 +24,12 @@ public class User {
         this.id = id;
     }
 
-    public String getPasword() {
-        return pasword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasword(String pasword) {
-        this.pasword = pasword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -38,11 +40,19 @@ public class User {
         this.email = email;
     }
 
-    public boolean isFlag() {
+    public boolean getFlag() {
         return flag;
     }
 
     public void setFlag(boolean flag) {
         this.flag = flag;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
     }
 }

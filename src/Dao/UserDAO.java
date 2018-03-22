@@ -1,29 +1,140 @@
 package Dao;
 
 import Models.User;
-
 import java.util.ArrayList;
+import java.util.logging.Logger;
+import Connection.ConnectionFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.lang.String;
 
 public class UserDAO {
 
+    protected static final Logger LOGGER = Logger.getLogger(UserDAO.class.getName());
+    private static final String insertStatementString = "INSERT INTO user (email, pass, nume, flag)" + " VALUES (?,?,?,?)";
+    private final static String findStatementString = "SELECT * FROM user where id_user = ?";
+    private static final String deleteStatementString = "DELETE FROM user where id_user =?";
+    private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, flag=? WHERE id_user=?";
+    private static final String showAllStatementString = "SELECT * FROM user";
+
     public static User findUser(User user)
     {
+        User toReturn = null;
 
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement findStatement = null;
+        ResultSet rs = null;
+        try{
+            findStatement = dbConnection.prepareStatement(findStatementString);
+            findStatement.setLong(1, user.getId());
+            rs = findStatement.executeQuery();
+            rs.next();
+            String email = rs.getString("email");
+            String password = rs.getString("pass");
+            String nume = rs.getString("nume");
+            boolean flag = rs.getBoolean("flag");
+            toReturn = new User(user.getId(), email, password, nume, flag);
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING,"ClientDAO:findById " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(rs);
+            ConnectionFactory.close(findStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+        return toReturn;
     }
-    public static void insertUser(User user)
+    public static int insertUser(User user)
     {
+        Connection dbConnection = ConnectionFactory.getConnection();
 
+        PreparedStatement insertStatement = null;
+        int insertedId = -1;
+        try {
+            insertStatement = dbConnection.prepareStatement(insertStatementString, Statement.RETURN_GENERATED_KEYS);
+            insertStatement.setString(1, user.getEmail());
+            insertStatement.setString(2, user.getPassword());
+            insertStatement.setString(3, user.getNume());
+            insertStatement.setBoolean(4, user.getFlag());
+
+            insertStatement.executeUpdate();
+
+            ResultSet rs = insertStatement.getGeneratedKeys();
+            if (rs.next()) {
+                insertedId = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "ClientDAO:insert " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(insertStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+        return insertedId;
     }
     public static void deleteUser(User user)
     {
+        {
+            Connection dbConnection = ConnectionFactory.getConnection();
 
+            PreparedStatement deleteStatement = null;
+
+            try {
+                deleteStatement = dbConnection.prepareStatement(deleteStatementString);
+                deleteStatement.setInt(1, user.getId());
+
+                deleteStatement.executeUpdate();
+            } catch (SQLException e) {
+                LOGGER.log(Level.WARNING, "ClientDAO:delete " + e.getMessage());
+            } finally {
+                ConnectionFactory.close(deleteStatement);
+                ConnectionFactory.close(dbConnection);
+            }
+        }
     }
     public static void updateUser(User user)
     {
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement updateStatement = null;
+        try {
+            updateStatement = dbConnection.prepareStatement(updateStatementString);
+            updateStatement.setString(1, user.getEmail());
+            updateStatement.setString(2, user.getPassword());
+            updateStatement.setString(3, user.getNume());
+            updateStatement.setBoolean(4, user.getFlag());
+            updateStatement.setInt(5, user.getId());
 
+            updateStatement.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "ClientDAO:update " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(updateStatement);
+            ConnectionFactory.close(dbConnection);
+        }
     }
     public static ArrayList<User> getUsers()
     {
+        ArrayList <User> users = new ArrayList <User>();
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement showStatement = null;
+        try {
+            showStatement = dbConnection.prepareStatement(showAllStatementString);
+            ResultSet rs = showStatement.executeQuery();
 
+            while(rs.next())
+            {
+                User user = new User(rs.getInt("id_user"),rs.getString("email"),rs.getString("pass"),rs.getString("nume"),rs.getBoolean("flag"));
+                users.add(user);
+            }
+
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "ClientDAO:show " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(showStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+        return users;
     }
 }
