@@ -6,14 +6,14 @@ public class User {
     private String password;
     private String email;
     private String nume;
-    private boolean flag;
+    private boolean active;
 
-    public User(int id, String password, String email, String nume, boolean flag) {
+    public User(int id, String password, String email, String nume, boolean active) {
         this.id = id;
         this.password = password;
         this.email = email;
         this.nume = nume;
-        this.flag = flag;
+        this.active = active;
     }
 
     public int getId() {
@@ -40,12 +40,12 @@ public class User {
         this.email = email;
     }
 
-    public boolean getFlag() {
-        return flag;
+    public boolean getActive() {
+        return active;
     }
 
-    public void setFlag(boolean flag) {
-        this.flag = flag;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public String getNume() {

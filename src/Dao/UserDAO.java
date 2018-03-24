@@ -58,7 +58,7 @@ public class UserDAO {
             insertStatement.setString(1, user.getEmail());
             insertStatement.setString(2, user.getPassword());
             insertStatement.setString(3, user.getNume());
-            insertStatement.setBoolean(4, user.getFlag());
+            insertStatement.setBoolean(4, user.getActive());
 
             insertStatement.executeUpdate();
 
@@ -103,7 +103,7 @@ public class UserDAO {
             updateStatement.setString(1, user.getEmail());
             updateStatement.setString(2, user.getPassword());
             updateStatement.setString(3, user.getNume());
-            updateStatement.setBoolean(4, user.getFlag());
+            updateStatement.setBoolean(4, user.getActive());
             updateStatement.setInt(5, user.getId());
 
             updateStatement.executeUpdate();

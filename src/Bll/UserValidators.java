@@ -7,11 +7,11 @@ import Models.User;
 import Validators.EmailValidator;
 import Validators.Validator;
 
-public class UserBLL {
+public class UserValidators {
 
     private List<Validator<User>> validators;
 
-    public UserBLL() {
+    public UserValidators() {
         this.validators =  new ArrayList<Validator<User>>();
         validators.add(new EmailValidator());
     }
