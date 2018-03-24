@@ -1,6 +1,5 @@
 package View;
 
-import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -10,9 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 
-import Bll.CosBLL;
-import Bll.ProductBLL;
-import Models.*;
+import Bll.ProductValidators;
 import Models.Product;
 import Models.User;
 
@@ -63,7 +60,7 @@ public class UserView extends JFrame
     }
     public void showProduct()
     {
-        ArrayList<Product> list = ProductBLL.getProducts();
+        ArrayList<Product> list = ProductValidators.getProducts();
         DefaultTableModel model = (DefaultTableModel)jTable2.getModel();
         model.setRowCount(0);
         Object[] row = new Object[4];

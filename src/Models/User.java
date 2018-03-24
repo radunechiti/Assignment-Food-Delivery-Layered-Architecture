@@ -7,13 +7,28 @@ public class User {
     private String email;
     private String nume;
     private boolean active;
+    private boolean loyal;
 
-    public User(int id, String password, String email, String nume, boolean active) {
+    public User(int id, String password, String email, String nume, boolean active, boolean loyal) {
         this.id = id;
         this.password = password;
         this.email = email;
         this.nume = nume;
         this.active = active;
+        this.loyal=loyal;
+
+    }
+    public User(int id)
+    {
+        this.id=id;
+    }
+
+    public User(String password, String email, String nume, boolean active, boolean loyal) {
+        this.password = password;
+        this.email = email;
+        this.nume = nume;
+        this.active = active;
+        this.loyal = loyal;
     }
 
     public int getId() {
@@ -54,5 +69,15 @@ public class User {
 
     public void setNume(String nume) {
         this.nume = nume;
+    }
+
+
+
+    public boolean getLoyal() {
+        return loyal;
+    }
+
+    public void setLoyal(boolean loyal) {
+        this.loyal = loyal;
     }
 }

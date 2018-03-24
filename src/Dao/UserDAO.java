@@ -15,10 +15,10 @@ import java.lang.String;
 public class UserDAO {
 
     protected static final Logger LOGGER = Logger.getLogger(UserDAO.class.getName());
-    private static final String insertStatementString = "INSERT INTO user (email, pass, nume, flag)" + " VALUES (?,?,?,?)";
+    private static final String insertStatementString = "INSERT INTO user (email, pass, nume, active, loyal)" + " VALUES (?,?,?,?,?)";
     private final static String findStatementString = "SELECT * FROM user where id_user = ?";
-    private static final String deleteStatementString = "DELETE FROM user where id_user =?";
-    private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, flag=? WHERE id_user=?";
+    private static final String deleteStatementString = "UPDATE user SET active=? WHERE id_user=?";
+    private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, active=?,loyal=? WHERE id_user=?";
     private static final String showAllStatementString = "SELECT * FROM user";
 
     public static User findUser(User user)
@@ -36,8 +36,9 @@ public class UserDAO {
             String email = rs.getString("email");
             String password = rs.getString("pass");
             String nume = rs.getString("nume");
-            boolean flag = rs.getBoolean("flag");
-            toReturn = new User(user.getId(), email, password, nume, flag);
+            boolean active = rs.getBoolean("active");
+            boolean loyal = rs.getBoolean("loyal");
+            toReturn = new User(user.getId(), email, password, nume, active, loyal);
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING,"ClientDAO:findById " + e.getMessage());
         } finally {
@@ -58,7 +59,8 @@ public class UserDAO {
             insertStatement.setString(1, user.getEmail());
             insertStatement.setString(2, user.getPassword());
             insertStatement.setString(3, user.getNume());
-            insertStatement.setBoolean(4, user.getActive());
+            insertStatement.setBoolean(4, true);
+            insertStatement.setBoolean(5, false);
 
             insertStatement.executeUpdate();
 
@@ -78,12 +80,12 @@ public class UserDAO {
     {
         {
             Connection dbConnection = ConnectionFactory.getConnection();
-
             PreparedStatement deleteStatement = null;
 
             try {
                 deleteStatement = dbConnection.prepareStatement(deleteStatementString);
-                deleteStatement.setInt(1, user.getId());
+                deleteStatement.setBoolean(1, false);
+                deleteStatement.setInt(2, user.getId());
 
                 deleteStatement.executeUpdate();
             } catch (SQLException e) {
@@ -104,7 +106,8 @@ public class UserDAO {
             updateStatement.setString(2, user.getPassword());
             updateStatement.setString(3, user.getNume());
             updateStatement.setBoolean(4, user.getActive());
-            updateStatement.setInt(5, user.getId());
+            updateStatement.setBoolean(5, user.getLoyal());
+            updateStatement.setInt(6, user.getId());
 
             updateStatement.executeUpdate();
         } catch (SQLException e) {
@@ -125,7 +128,7 @@ public class UserDAO {
 
             while(rs.next())
             {
-                User user = new User(rs.getInt("id_user"),rs.getString("email"),rs.getString("pass"),rs.getString("nume"),rs.getBoolean("flag"));
+                User user = new User(rs.getInt("id_user"),rs.getString("email"),rs.getString("pass"),rs.getString("nume"),rs.getBoolean("active"), rs.getBoolean("loyal"));
                 users.add(user);
             }
 

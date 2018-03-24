@@ -8,24 +8,18 @@ public class Order {
 
     private int id;
     private String adress;
+    private String payment;
     private int total;
     private int id_user;
     private DateTime date;
 
-    public DateTime getDate() {
-        return date;
-    }
-
-    public void setDate(DateTime date) {
-        this.date = date;
-    }
-
-    public Order(int id, String adress, int total, int id_user, DateTime date) {
+    public Order(int id, String adress, int total, int id_user, DateTime date, String payment) {
         this.id = id;
         this.adress = adress;
         this.total = total;
         this.id_user = id_user;
         this.date = date;
+        this.payment = payment;
 
     }
 
@@ -59,6 +53,22 @@ public class Order {
 
     public void setId_user(int id_user) {
         this.id_user = id_user;
+    }
+
+    public DateTime getDate() {
+        return date;
+    }
+
+    public void setDate(DateTime date) {
+        this.date = date;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
     }
 }
 

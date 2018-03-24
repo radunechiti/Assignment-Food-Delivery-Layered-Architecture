@@ -122,7 +122,7 @@ public class ProductDAO {
 
             while(rs.next())
             {
-                Product product = new Product(rs.getInt("id_Product"),rs.getString("Name"),rs.getInt("Price"),rs.getInt("Quantity"));
+                Product product = new Product(rs.getInt("id_Product"),rs.getString("nume"),rs.getInt("Price"),rs.getInt("Quantity"));
                 list.add(product);
             }
 

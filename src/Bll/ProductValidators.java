@@ -8,11 +8,11 @@ import Validators.QuantityValidator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductBLL {
+public class ProductValidators {
 
     private List<Validator<Product>> validators;
 
-    public ProductBLL() {
+    public ProductValidators() {
         this.validators =  new ArrayList<Validator<Product>>();
         validators.add(new QuantityValidator());
     }
