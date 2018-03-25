@@ -4,6 +4,8 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.Date;
+
 public class Order {
 
     private int id;
@@ -11,9 +13,9 @@ public class Order {
     private String payment;
     private int total;
     private int id_user;
-    private DateTime date;
+    private Date date;
 
-    public Order(int id, String adress, int total, int id_user, DateTime date, String payment) {
+    public Order(int id, String adress, int total, int id_user, Date date, String payment) {
         this.id = id;
         this.adress = adress;
         this.total = total;
@@ -55,11 +57,11 @@ public class Order {
         this.id_user = id_user;
     }
 
-    public DateTime getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(DateTime date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

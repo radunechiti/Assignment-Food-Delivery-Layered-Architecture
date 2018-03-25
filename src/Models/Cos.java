@@ -45,4 +45,6 @@ public class Cos {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 }

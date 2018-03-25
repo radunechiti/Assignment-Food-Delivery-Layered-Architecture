@@ -77,7 +77,7 @@ public class UserView extends JFrame
     }
     public void showProduct1(int id_Order)
     {
-        /*ArrayList<Cos> list = CosBLL.findByOrder(id_Order);
+        /*ArrayList<Cos> list = CosValidators.findByOrder(id_Order);
         ArrayList<Product> list1 = new ArrayList<Product>();
         for(Cos ls: list)
         {

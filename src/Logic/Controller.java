@@ -42,6 +42,9 @@ public class Controller {
         this.adminView.ButtonAddProduct(new ButtonAddProduct_Listener());
         this.adminView.ButtonUpdateProduct(new ButtonUpdateProduct_Listener());
         this.adminView.ButtonDeleteProduct(new ButtonDeleteProduct_Listener());
+        this.userView.ButtonAddComanda(new ButtonAddComanda_Listener());
+        this.userView.ButtonFinishComanda(new ButtonFinishComanda_Listener());
+        this.userView.ButtonIstoric(new ButtonIstoric_Listener());
 
     }
 
@@ -211,6 +214,66 @@ public class Controller {
         }
     }
     public class ButtonDeleteProduct_Listener implements ActionListener    /////gata
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            try{
+                int i = adminView.jTable2.getSelectedRow();
+                TableModel model = adminView.jTable2.getModel();
+                int id = (Integer)model.getValueAt(i,0);
+
+                Product product = new Product(id);
+                ProductValidators productValidators = new ProductValidators();
+
+                productValidators.deleteProduct(product);
+                adminView.showProduct();
+
+            }catch(NumberFormatException exp){
+                JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            }
+        }
+    }
+    public class ButtonAddComanda_Listener implements ActionListener    /////gata
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            try{
+                int i = adminView.jTable2.getSelectedRow();
+                TableModel model = adminView.jTable2.getModel();
+                int id = (Integer)model.getValueAt(i,0);
+
+                Product product = new Product(id);
+                ProductValidators productValidators = new ProductValidators();
+
+                productValidators.deleteProduct(product);
+                adminView.showProduct();
+
+            }catch(NumberFormatException exp){
+                JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            }
+        }
+    }
+    public class ButtonFinishComanda_Listener implements ActionListener    /////gata
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            try{
+                int i = adminView.jTable2.getSelectedRow();
+                TableModel model = adminView.jTable2.getModel();
+                int id = (Integer)model.getValueAt(i,0);
+
+                Product product = new Product(id);
+                ProductValidators productValidators = new ProductValidators();
+
+                productValidators.deleteProduct(product);
+                adminView.showProduct();
+
+            }catch(NumberFormatException exp){
+                JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            }
+        }
+    }
+    public class ButtonIstoric_Listener implements ActionListener    /////gata
     {
         public void actionPerformed(ActionEvent e)
         {
