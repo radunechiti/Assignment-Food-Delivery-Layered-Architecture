@@ -1,5 +1,7 @@
 package Logic;
-
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import Bll.*;
 import Models.*;
 import View.*;
@@ -17,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static java.lang.Integer.parseInt;
+import static java.security.SecureRandom.getInstance;
 
 
 public class MainController {
@@ -53,6 +56,25 @@ public class MainController {
         this.adminView.ButtonReport(new ButtonReport_Listener());
 
 
+    }
+    private static String securePassword(String password) throws NoSuchAlgorithmException
+    {
+        StringBuffer sb =  new StringBuffer();
+        try{
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(password.getBytes());
+            //StringBuffer sb =  new StringBuffer();
+            for(int i=0; i<hash.length; i++)
+            {
+                String s = Integer.toHexString(0xff & hash[i]);
+                if(s.length()==1)
+                    sb.append('0');
+                sb.append(s);
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
     }
     public class ButtonReport_Listener implements ActionListener
     {
@@ -100,7 +122,7 @@ public class MainController {
                 boolean active = true;
                 boolean loyal = false;
 
-                User user = new User(pass, email, nume, active, loyal);
+                User user = new User(securePassword(pass), email, nume, active, loyal);
                 UserValidators userValidators = new UserValidators();
                 userValidators.insert(user);
                 adminView.showUser();
@@ -108,6 +130,8 @@ public class MainController {
                 createUserView.dispose();
             }catch(NumberFormatException exp){
                 JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            } catch (NoSuchAlgorithmException e1) {
+                e1.printStackTrace();
             }
         }
     }
@@ -122,28 +146,38 @@ public class MainController {
     {
         public void actionPerformed(ActionEvent e)
         {
-            String email = loginView.jTextField1.getText().toString();
-            String password = loginView.jPasswordField1.getText().toString();
-            UserValidators userValidators = new UserValidators();
-            User user = userValidators.find(new User(email, password));
-            if (user == null) {
-                AdminValidators adminValidators = new AdminValidators();
-                Admin admin = adminValidators.find(new Admin(email, password));
-                if (admin == null)
-                    System.out.println("eroareeeee");
-                else {
-                    adminView.showUser();
-                    adminView.showProduct();
-                    adminView.setVisible(true);
+
+            try {
+                System.out.println(securePassword("admin"));
+                String email = loginView.jTextField1.getText().toString();
+                String password = loginView.jPasswordField1.getText().toString();
+                System.out.println(password);
+                String encryptedPassword = securePassword(password);
+                System.out.println(encryptedPassword);
+                UserValidators userValidators = new UserValidators();
+                User user = userValidators.find(new User(email, encryptedPassword));
+
+                if (user == null) {
+                    AdminValidators adminValidators = new AdminValidators();
+                    Admin admin = adminValidators.find(new Admin(email, encryptedPassword));
+                    if (admin == null)
+                        System.out.println("eroareeeee");
+                    else {
+                        adminView.showUser();
+                        adminView.showProduct();
+                        adminView.setVisible(true);
+                    }
                 }
-            }
-            else
-            {
-                userView.setVisible(true);
-                ArrayList<Product> list = ProductValidators.getProducts();
-                userView.showProduct(list);
-                userView.jTextField1.setText(String.valueOf(user.getId()));
-                userView.jTextField2.setText(user.getNume());
+                else
+                {
+                    userView.setVisible(true);
+                    ArrayList<Product> list = ProductValidators.getProducts();
+                    userView.showProduct(list);
+                    userView.jTextField1.setText(String.valueOf(user.getId()));
+                    userView.jTextField2.setText(user.getNume());
+                }
+            } catch (NoSuchAlgorithmException e1) {
+                e1.printStackTrace();
             }
         }
     }

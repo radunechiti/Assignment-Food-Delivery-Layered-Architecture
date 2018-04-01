@@ -3,52 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="82b8ad60-b1ce-4c4e-979a-c39c1c474dc5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Bll/CosBLL.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Bll/OrderBLL.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Bll/ProductValidators.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Bll/ProductValidators.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Dao/CosDAO.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Dao/CosDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Dao/OrderDAO.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Dao/OrderDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Dao/ProductDAO.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Dao/ProductDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Dao/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Dao/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonAddProduct_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonAddUser_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonDeleteProduct_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonDeleteUser_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonUpdateProduct_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ButtonUpdateUser_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ClickProduct_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$ClickUser_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$CreateNewAccount_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$SignIn_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller$SignUp_Listener.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/Controller.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/Admin.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/Admin.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/Cos.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/Cos.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/Istoric.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/Istoric.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/Order.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/Order.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/User.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/User.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Start/Main.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Start/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView$1.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView$2.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/AdminView.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/Menu.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonFinishComanda_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonFinishComanda_Listener.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView.class" />
-      <change beforePath="$PROJECT_DIR$/src/Bll/OrderValidators.java" afterPath="$PROJECT_DIR$/src/Bll/OrderValidators.java" />
-      <change beforePath="$PROJECT_DIR$/src/Bll/ProductValidators.java" afterPath="$PROJECT_DIR$/src/Bll/ProductValidators.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/CosDAO.java" afterPath="$PROJECT_DIR$/src/Dao/CosDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/OrderDAO.java" afterPath="$PROJECT_DIR$/src/Dao/OrderDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/ProductDAO.java" afterPath="$PROJECT_DIR$/src/Dao/ProductDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/Dao/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/Controller.java" afterPath="$PROJECT_DIR$/src/Logic/MainController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Admin.java" afterPath="$PROJECT_DIR$/src/Models/Admin.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Cos.java" afterPath="$PROJECT_DIR$/src/Models/Cos.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Istoric.java" afterPath="$PROJECT_DIR$/src/Models/Istoric.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Order.java" afterPath="$PROJECT_DIR$/src/Models/Order.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/User.java" afterPath="$PROJECT_DIR$/src/Models/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/Start/Main.java" afterPath="$PROJECT_DIR$/src/Start/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/AdminView.java" afterPath="$PROJECT_DIR$/src/View/AdminView.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/Menu.java" afterPath="$PROJECT_DIR$/src/View/LoginView.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserView.java" afterPath="$PROJECT_DIR$/src/View/UserView.java" />
+      <change beforePath="$PROJECT_DIR$/src/Logic/MainController.java" afterPath="$PROJECT_DIR$/src/Logic/MainController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,146 +26,6 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Logic/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="350" column="97" lean-forward="false" selection-start-line="350" selection-start-column="97" selection-end-line="350" selection-end-column="97" />
-              <folding>
-                <element signature="class#ButtonReport_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#CreateNewAccount_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#SignUp_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ClickUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ClickProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonAddUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonDeleteUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonAddProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonUpdateProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonDeleteProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#ButtonDeleteProduct_Listener#0;class#MainController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminValidators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bll/AdminValidators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserValidators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bll/UserValidators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dao/AdminDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1522575936642" expanded="true" signature="445:493" ph="SELECT * FRO... admin" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/UserView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
-              <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-              <folding>
-                <element signature="method#showProduct#0;class#UserView#0" expanded="false" />
-                <element signature="method#showCos#0;class#UserView#0" expanded="false" />
-                <element signature="method#showClickProduct#0;class#UserView#0" expanded="false" />
-                <element signature="method#showDetailsClient#0;class#UserView#0" expanded="false" />
-                <element signature="method#setTotal#0;class#UserView#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CosDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dao/CosDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="36" />
-              <folding>
-                <marker date="1522568436791" expanded="true" signature="552:621" ph="INSERT INTO ProductOrder... " />
-                <marker date="1522568436791" expanded="true" signature="686:719" ph="SELECT * FRO... ProductOrder" />
-                <marker date="1522568436791" expanded="true" signature="780:794" ph="SELECT * FRO... ProductOrder" />
-                <marker date="1522568436791" expanded="true" signature="780:798" ph="SELECT * FRO... coss" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dao/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="85" />
-              <folding>
-                <marker date="1522573026807" expanded="true" signature="504:579" ph="INSERT INTO user... " />
-                <marker date="1522573026807" expanded="true" signature="637:671" ph="SELECT * FRO... user" />
-                <marker date="1522573026807" expanded="true" signature="637:684" ph="SELECT * FRO... user" />
-                <marker date="1522573026807" expanded="true" signature="744:784" ph="DELETE FROM user... " />
-                <marker date="1522573026807" expanded="true" signature="844:917" ph="UPDATE user... " />
-                <marker date="1522573026807" expanded="true" signature="978:996" ph="SELECT * FRO... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Admin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Admin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -284,9 +101,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="575" />
-    <option name="y" value="30" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="738" />
   </component>
@@ -308,6 +124,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -354,6 +172,12 @@
               <item name="Food Delivery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Food Delivery" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Validators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Food Delivery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Food Delivery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,10 +188,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,16 +340,16 @@
       <workItem from="1522316292796" duration="3305000" />
       <workItem from="1522483069972" duration="226000" />
       <workItem from="1522517292935" duration="20680000" />
-      <workItem from="1522576225713" duration="659000" />
+      <workItem from="1522576225713" duration="2969000" />
+      <workItem from="1522580417575" duration="4119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82833000" />
+    <option name="totallyTimeSpent" value="89262000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -535,14 +357,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35303515" sideWeight="0.51124436" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34890965" sideWeight="0.5139092" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3411215" sideWeight="0.4887556" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34890965" sideWeight="0.48609078" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25183016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -747,7 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,10 +638,10 @@
         <state relative-caret-position="255">
           <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="false" />
+            <element signature="e#510#511#0" expanded="false" />
+            <element signature="e#558#559#0" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -868,14 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bll/UserValidators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bll/AdminValidators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -900,21 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dao/AdminDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1522575936642" expanded="true" signature="445:493" ph="SELECT * FRO... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/UserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+        <state relative-caret-position="2533">
+          <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
           <folding>
             <element signature="method#showProduct#0;class#UserView#0" expanded="false" />
             <element signature="method#showCos#0;class#UserView#0" expanded="false" />
@@ -925,10 +727,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/AdminDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1522575936642" expanded="true" signature="445:493" ph="SELECT * FRO... admin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="85" />
+        <state relative-caret-position="272">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <marker date="1522573026807" expanded="true" signature="504:579" ph="INSERT INTO user... " />
             <marker date="1522573026807" expanded="true" signature="637:671" ph="SELECT * FRO... user" />
@@ -940,30 +761,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/Bll/UserValidators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="350" column="97" lean-forward="false" selection-start-line="350" selection-start-column="97" selection-end-line="350" selection-end-column="97" />
+        <state relative-caret-position="255">
+          <caret line="153" column="45" lean-forward="true" selection-start-line="153" selection-start-column="45" selection-end-line="153" selection-end-column="45" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="class#ButtonReport_Listener#0;class#MainController#0" expanded="false" />
-            <element signature="class#CreateNewAccount_Listener#0;class#MainController#0" expanded="false" />
             <element signature="class#SignUp_Listener#0;class#MainController#0" expanded="false" />
+            <element signature="e#6021#6022#0" expanded="true" />
+            <element signature="e#6076#6077#0" expanded="true" />
             <element signature="class#ClickUser_Listener#0;class#MainController#0" expanded="false" />
+            <element signature="e#7968#7969#0" expanded="true" />
+            <element signature="e#8017#8018#0" expanded="true" />
             <element signature="class#ClickProduct_Listener#0;class#MainController#0" expanded="false" />
+            <element signature="e#8502#8503#0" expanded="true" />
+            <element signature="e#8554#8555#0" expanded="true" />
             <element signature="class#ButtonAddUser_Listener#0;class#MainController#0" expanded="false" />
             <element signature="class#ButtonDeleteUser_Listener#0;class#MainController#0" expanded="false" />
             <element signature="class#ButtonAddProduct_Listener#0;class#MainController#0" expanded="false" />
             <element signature="class#ButtonUpdateProduct_Listener#0;class#MainController#0" expanded="false" />
             <element signature="class#ButtonDeleteProduct_Listener#0;class#MainController#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ButtonDeleteProduct_Listener#0;class#MainController#0" expanded="false" />
+            <element signature="e#17793#17794#0" expanded="true" />
+            <element signature="e#17844#17845#0" expanded="true" />
           </folding>
         </state>
       </provider>
