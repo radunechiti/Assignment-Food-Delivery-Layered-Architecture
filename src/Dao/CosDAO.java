@@ -21,7 +21,7 @@ public class CosDAO
 
     protected static final Logger LOGGER = Logger.getLogger(CosDAO.class.getName());
     private static final String insertStatementString = "INSERT INTO coss (id_product, id_order, quantity)" + " VALUES (?,?,?)";
-    private final static String showCurrentStatementString = "SELECT * FROM coss where id_cos=?";
+    private final static String findCurrentStatementString = "SELECT * FROM coss where id_cos=?";
     private static final String showAllStatementString = "SELECT * FROM coss";
     public static ArrayList<Cos> findByOrder(int id_Order)
     {
@@ -29,7 +29,7 @@ public class CosDAO
         Connection dbConnection = ConnectionFactory.getConnection();
         PreparedStatement showStatement = null;
         try {
-            showStatement = dbConnection.prepareStatement(showCurrentStatementString);
+            showStatement = dbConnection.prepareStatement(findCurrentStatementString);
             showStatement.setInt(1, id_Order);
             ResultSet rs = showStatement.executeQuery();
             Cos cos;
@@ -39,7 +39,7 @@ public class CosDAO
                 list.add(cos);
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "ProductDAO:show " + e.getMessage());
+            LOGGER.log(Level.WARNING, "CosDAO:show " + e.getMessage());
         } finally {
             ConnectionFactory.close(showStatement);
             ConnectionFactory.close(dbConnection);
@@ -59,16 +59,12 @@ public class CosDAO
             insertStatement.setInt(3, cos.getQuantity());
             insertStatement.executeUpdate();
 
-           // Product product = ProductValidators.findProduct(productOrder.getId_Product());
-            //product.setQuantity(product.getQuantity()-productOrder.getQuantity());
-            //ProductDAO.update(product);   //trebuie facuta in controller
-
             ResultSet rs = insertStatement.getGeneratedKeys();
             if (rs.next()) {
                 insertedId = rs.getInt(1);
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "ProductOrderDAO:insert " + e.getMessage());
+            LOGGER.log(Level.WARNING, "CosOrderDAO:insert " + e.getMessage());
         } finally {
             ConnectionFactory.close(insertStatement);
             ConnectionFactory.close(dbConnection);
@@ -91,7 +87,7 @@ public class CosDAO
             }
 
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "ProductDAO:show " + e.getMessage());
+            LOGGER.log(Level.WARNING, "CosDAO:show " + e.getMessage());
         } finally {
             ConnectionFactory.close(showStatement);
             ConnectionFactory.close(dbConnection);

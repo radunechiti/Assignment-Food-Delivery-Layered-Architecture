@@ -111,46 +111,43 @@ public class MainController {
                 }
         }
     }
-    public class CreateNewAccount_Listener implements ActionListener ///////gata
+    public class CreateNewAccount_Listener implements ActionListener  //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
             try {
                 String email = createUserView.jTextField1.getText();
-                String pass = createUserView.jTextField1.getText();
-                String nume = createUserView.jTextField1.getText();
-                boolean active = true;
-                boolean loyal = false;
-
-                User user = new User(securePassword(pass), email, nume, active, loyal);
+                String pass = createUserView.jTextField2.getText();
+                String nume = createUserView.jTextField3.getText();
+                User user = new User(securePassword(pass), email, nume, true, false);
                 UserValidators userValidators = new UserValidators();
                 userValidators.insert(user);
                 adminView.showUser();
                 JOptionPane.showMessageDialog(null, "Felicitari! Ati creat un cont nou.");
                 createUserView.dispose();
-            }catch(NumberFormatException exp){
-                JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            }catch(IllegalArgumentException exp){
+                JOptionPane.showMessageDialog(null, exp.getMessage());
             } catch (NoSuchAlgorithmException e1) {
                 e1.printStackTrace();
             }
         }
     }
-    public class SignUp_Listener implements ActionListener    ////gata
+    public class SignUp_Listener implements ActionListener            //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
             createUserView.setVisible(true);
         }
     }
-    public class SignIn_Listener implements ActionListener  //gataaaaaaaaaaaaaaaa
+    public class SignIn_Listener implements ActionListener            //gata
     {
         public void actionPerformed(ActionEvent e)
         {
 
             try {
-                System.out.println(securePassword("admin"));
                 String email = loginView.jTextField1.getText().toString();
                 String password = loginView.jPasswordField1.getText().toString();
+                System.out.println(email);
                 System.out.println(password);
                 String encryptedPassword = securePassword(password);
                 System.out.println(encryptedPassword);
@@ -160,13 +157,13 @@ public class MainController {
                 if (user == null) {
                     AdminValidators adminValidators = new AdminValidators();
                     Admin admin = adminValidators.find(new Admin(email, encryptedPassword));
-                    if (admin == null)
-                        System.out.println("eroareeeee");
-                    else {
+                    if (admin != null) {
                         adminView.showUser();
                         adminView.showProduct();
                         adminView.setVisible(true);
                     }
+                    else
+                        throw new IllegalArgumentException("Introducti date valide!");
                 }
                 else
                 {
@@ -178,6 +175,9 @@ public class MainController {
                 }
             } catch (NoSuchAlgorithmException e1) {
                 e1.printStackTrace();
+            }
+            catch(NumberFormatException exp){
+                JOptionPane.showMessageDialog(null, exp.getMessage());
             }
         }
     }
@@ -219,7 +219,7 @@ public class MainController {
                 TableModel model = adminView.jTable1.getModel();
                 int id = (Integer)model.getValueAt(i,0);
                 String email = adminView.jTextField1.getText();
-                String pass = adminView.jTextField2.getText();
+                String pass = securePassword(adminView.jTextField2.getText());
                 String nume = adminView.jTextField3.getText();
                 boolean active = true;
                 boolean loyal;
@@ -231,11 +231,13 @@ public class MainController {
 
                 User user = new User(id, pass, email, nume, active, loyal);
                 UserValidators userValidators = new UserValidators();
-
                 userValidators.update(user);
+
                 adminView.showUser();
             }catch(NumberFormatException exp){
                 JOptionPane.showMessageDialog(null, "Introduceti date valide");
+            } catch (NoSuchAlgorithmException e1) {
+                e1.printStackTrace();
             }
         }
     }
@@ -387,7 +389,7 @@ public class MainController {
                 System.out.println(istoric.getId_Order());
                 IstoricValidators istoricValidators = new IstoricValidators();
                 istoricValidators.insert(istoric);
-                ArrayList<Istoric> list = istoricValidators.showByIdUser(1);
+                ArrayList<Istoric> list = istoricValidators.getIstoricByIdUser(1); //////trebuie sa schimb userul
                 istoricView.showIstoric(list);
                 adminView.showProduct();
 
@@ -403,7 +405,7 @@ public class MainController {
             istoricView.setVisible(true);
             int id_user = 1;
             IstoricValidators istoricValidators = new IstoricValidators();
-            ArrayList<Istoric> list = istoricValidators.showByIdUser(id_user);
+            ArrayList<Istoric> list = istoricValidators.getIstoricByIdUser(id_user);  //trebuie sa schimb userul
             istoricView.showIstoric(list);
         }
     }

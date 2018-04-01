@@ -12,7 +12,7 @@ import Models.Order;
 
 public class IstoricDAO {
     protected static final Logger LOGGER = Logger.getLogger(IstoricDAO.class.getName());
-    private final static String showCurrentStatementString = "SELECT * FROM istoric where id_user=?";
+    private final static String findCurrentStatementString = "SELECT * FROM istoric where id_user=?";
     private static final String insertStatementString = "INSERT INTO istoric (id_user, id_order)" + " VALUES (?,?)";
 
     public static ArrayList<Istoric> getIstoricByIdUser(int id_user)
@@ -21,7 +21,7 @@ public class IstoricDAO {
         Connection dbConnection = ConnectionFactory.getConnection();
         PreparedStatement showStatement = null;
         try {
-            showStatement = dbConnection.prepareStatement(showCurrentStatementString);
+            showStatement = dbConnection.prepareStatement(findCurrentStatementString);
             showStatement.setInt(1, id_user);
             ResultSet rs = showStatement.executeQuery();
             Istoric istoric;
@@ -63,5 +63,4 @@ public class IstoricDAO {
         }
        // return insertedId;
     }
-
 }

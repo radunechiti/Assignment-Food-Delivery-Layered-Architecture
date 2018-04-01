@@ -4,6 +4,8 @@ import Models.User;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 import Connection.ConnectionFactory;
+
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,9 +42,9 @@ public class UserDAO {
             String nume = rs.getString("nume");
             boolean active = rs.getBoolean("active");
             boolean loyal = rs.getBoolean("loyal");
-            toReturn = new User(id_user, email, password, nume, active, loyal);
+            toReturn = new User(id_user, password, email, nume, active, loyal);
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING,"ClientDAO:findById " + e.getMessage());
+            LOGGER.log(Level.WARNING,"UserDAO:findById " + e.getMessage());
         } finally {
             ConnectionFactory.close(rs);
             ConnectionFactory.close(findStatement);
@@ -71,7 +73,7 @@ public class UserDAO {
                 insertedId = rs.getInt(1);
             }
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "ClientDAO:insert " + e.getMessage());
+            LOGGER.log(Level.WARNING, "UserDAO:insert " + e.getMessage());
         } finally {
             ConnectionFactory.close(insertStatement);
             ConnectionFactory.close(dbConnection);
@@ -91,7 +93,7 @@ public class UserDAO {
 
                 deleteStatement.executeUpdate();
             } catch (SQLException e) {
-                LOGGER.log(Level.WARNING, "ClientDAO:delete " + e.getMessage());
+                LOGGER.log(Level.WARNING, "UserDAO:delete " + e.getMessage());
             } finally {
                 ConnectionFactory.close(deleteStatement);
                 ConnectionFactory.close(dbConnection);
@@ -113,7 +115,8 @@ public class UserDAO {
 
             updateStatement.executeUpdate();
         } catch (SQLException e) {
-            LOGGER.log(Level.WARNING, "ClientDAO:update " + e.getMessage());
+            LOGGER.log(Level.WARNING, "UserDAO:update " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "This email is already used");
         } finally {
             ConnectionFactory.close(updateStatement);
             ConnectionFactory.close(dbConnection);
@@ -130,7 +133,7 @@ public class UserDAO {
 
             while(rs.next())
             {
-                User user = new User(rs.getInt("id_user"),rs.getString("email"),rs.getString("pass"),rs.getString("nume"),rs.getBoolean("active"), rs.getBoolean("loyal"));
+                User user = new User(rs.getInt("id_user"),rs.getString("pass"),rs.getString("email"),rs.getString("nume"),rs.getBoolean("active"), rs.getBoolean("loyal"));
                 users.add(user);
             }
 

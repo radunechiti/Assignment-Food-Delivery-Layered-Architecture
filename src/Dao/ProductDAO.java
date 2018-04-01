@@ -12,6 +12,7 @@ import Connection.ConnectionFactory;
 import Models.Product;
 
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class ProductDAO {
@@ -69,6 +70,7 @@ public class ProductDAO {
             }
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, "ProductDAO:insert " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "This product already exists");
         } finally {
             ConnectionFactory.close(insertStatement);
             ConnectionFactory.close(dbConnection);
@@ -106,6 +108,7 @@ public class ProductDAO {
             updateStatement.executeUpdate();
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, "ProductDAO:update " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "This product already exists");
         } finally {
             ConnectionFactory.close(updateStatement);
             ConnectionFactory.close(dbConnection);

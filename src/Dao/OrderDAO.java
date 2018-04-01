@@ -17,7 +17,6 @@ public class OrderDAO
     private final static String findStatementString = "SELECT * FROM orderr where id_order = ?";
     private final static String findByIdUserStatementString = "SELECT * FROM orderr where id_user = ?";
     private static final String updateStatementString = "UPDATE orderr SET total=? WHERE id_order=?";
-    //private static final String showAllStatementString = "SELECT * FROM Client";
     public static Order findOrderById(int id_Order)
     {
         Order toReturn = null;
@@ -96,7 +95,7 @@ public class OrderDAO
         }
         return insertedId;
     }
-
+/*
     public static void update(Order order)
     {
         Connection dbConnection = ConnectionFactory.getConnection();
@@ -113,6 +112,6 @@ public class OrderDAO
             ConnectionFactory.close(updateStatement);
             ConnectionFactory.close(dbConnection);
         }
-    }
+    }*/
 }
 

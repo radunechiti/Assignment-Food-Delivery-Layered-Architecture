@@ -2,6 +2,7 @@ package Bll;
 
 import Dao.ProductDAO;
 import Models.Product;
+import Validators.PriceValidator;
 import Validators.Validator;
 import Validators.QuantityValidator;
 
@@ -15,6 +16,8 @@ public class ProductValidators {
     public ProductValidators() {
         this.validators =  new ArrayList<Validator<Product>>();
         validators.add(new QuantityValidator());
+        validators.add(new PriceValidator());
+        validators.add(new ProductExistValidator());
     }
 
     public static Product findProduct(int id_product)

@@ -4,34 +4,36 @@ import Dao.CosDAO;
 import Dao.ProductDAO;
 import Models.Cos;
 import Models.Product;
+import Validators.Validator;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class CosValidators {
 
-    public void insert(Cos cos)
-    {
-        Product product = ProductDAO.findProductById(cos.getId_product());
-        int available = product.getQuantity();
-        try{
-            if(available < cos.getQuantity())
-                throw new Exception("Error");
-            CosDAO.insert(cos);
-        }catch(Exception e)
-        {
-            //JOptionPane.shwoMessageDialog(null, "Cantitate insuficienta");
-        }
+    private List<Validator<Cos>> validators;
+
+    public CosValidators() {
+        this.validators =  new ArrayList<Validator<Cos>>();
     }
 
-    public static ArrayList<Cos> showAll()
+    public ArrayList<Cos> findByOrder(int id_Order)
+    {
+        return CosDAO.findByOrder(id_Order);
+    }
+    public int insert(Cos cos)
+    {
+        for(Validator<Cos> v: validators)
+            v.validate(cos);
+        return CosDAO.insert(cos);
+    }
+
+    public static ArrayList<Cos> getCosList()
     {
         return CosDAO.getCosList();
     }
-    public static ArrayList<Cos> findByCos(int id)
-    {
-        return CosDAO.findByOrder(id);
-    }
+
 }

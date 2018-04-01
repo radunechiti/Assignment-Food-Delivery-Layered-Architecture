@@ -4,8 +4,7 @@ import java.util.List;
 
 import Dao.UserDAO;
 import Models.User;
-import Validators.EmailValidator;
-import Validators.Validator;
+import Validators.*;
 
 public class UserValidators {
 
@@ -14,8 +13,9 @@ public class UserValidators {
     public UserValidators() {
         this.validators =  new ArrayList<Validator<User>>();
         validators.add(new EmailValidator());
+        validators.add(new PasswordEmptyValidator());
+        validators.add(new NumeEmptyValidator());
     }
-
     public User find(User user)
     {
         return UserDAO.findUser(user);
