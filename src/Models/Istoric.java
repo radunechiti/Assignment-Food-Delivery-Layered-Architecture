@@ -11,6 +11,10 @@ public class Istoric {
         this.id_User = id_User;
         this.id_Order = id_Order;
     }
+    public Istoric(int id_User, int id_Order) {
+        this.id_User = id_User;
+        this.id_Order = id_Order;
+    }
 
     public int getId() {
         return id;

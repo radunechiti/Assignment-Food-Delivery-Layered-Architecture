@@ -1,0 +1,77 @@
+User details
+Name: ru@fds.com
+Email: ru@fds.com
+Loyal: false
+Activ: false
+
+Comanda nr: 1
+Adresa: 100
+Payment: Cash
+Total: 400
+Date: null
+
+Comanda nr: 2
+Adresa: 10
+Payment: Cash
+Total: 120
+Date: null
+
+Comanda nr: 3
+Adresa: 20
+Payment: Cash
+Total: 20
+Date: null
+
+Comanda nr: 4
+Adresa: 10
+Payment: Cash
+Total: 20
+Date: null
+
+Comanda nr: 5
+Adresa: 10
+Payment: Cash
+Total: 30
+Date: null
+
+Comanda nr: 6
+Adresa: 10
+Payment: Cash
+Total: 30
+Date: null
+
+Comanda nr: 7
+Adresa: 10
+Payment: Cash
+Total: 20
+Date: null
+
+Comanda nr: 8
+Adresa: 10
+Payment: Cash
+Total: 20
+Date: null
+
+Comanda nr: 9
+Adresa: 20
+Payment: Cash
+Total: 40
+Date: null
+
+Comanda nr: 10
+Adresa: 20
+Payment: Cash
+Total: 100
+Date: null
+
+Comanda nr: 11
+Adresa: 10
+Payment: Cash
+Total: 40
+Date: null
+
+Comanda nr: 12
+Adresa: 100
+Payment: Cash
+Total: 500
+Date: null

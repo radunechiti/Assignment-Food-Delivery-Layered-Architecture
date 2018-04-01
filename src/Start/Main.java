@@ -1,20 +1,18 @@
 package Start;
 
-import Logic.Controller;
-import View.AdminView;
-import View.CreateUserView;
-import View.Menu;
-import View.UserView;
+import Logic.MainController;
+import View.*;
 
 public class Main {
 
     public static void main(String[] args)
     {
 
-        Menu menu = new Menu();
+        LoginView loginView = new LoginView();
         AdminView adminView =  new AdminView();
         CreateUserView createUserView = new CreateUserView();
         UserView userView = new UserView();
-        Controller controller = new Controller(menu,adminView,createUserView,userView);
+        IstoricView istoricView = new IstoricView();
+        MainController mainController = new MainController(loginView,adminView,createUserView,userView, istoricView);
     }
 }

@@ -13,6 +13,11 @@ public class Cos {
         this.id_order = id_order;
         this.quantity = quantity;
     }
+    public Cos(int id_product, int id_order, int quantity) {
+        this.id_product = id_product;
+        this.id_order = id_order;
+        this.quantity = quantity;
+    }
 
     public int getId() {
         return id;

@@ -5,6 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import Connection.ConnectionFactory;
+import Models.Istoric;
 import Models.Order;
 import org.joda.time.DateTime;
 
@@ -14,6 +15,7 @@ public class OrderDAO
     protected static final Logger LOGGER = Logger.getLogger(OrderDAO.class.getName());
     private static final String insertStatementString = "INSERT INTO orderr (total, id_user,adress, payment, timp)" + " VALUES (?,?,?,?,?)";
     private final static String findStatementString = "SELECT * FROM orderr where id_order = ?";
+    private final static String findByIdUserStatementString = "SELECT * FROM orderr where id_user = ?";
     private static final String updateStatementString = "UPDATE orderr SET total=? WHERE id_order=?";
     //private static final String showAllStatementString = "SELECT * FROM Client";
     public static Order findOrderById(int id_Order)
@@ -34,7 +36,7 @@ public class OrderDAO
             String adress = rs.getString("adress");
             String payment = rs.getString("payment");
             Date data = rs.getDate("timp");
-            toReturn = new Order(id_Order, adress, total, id_user, data, payment);
+            toReturn = new Order(id_Order, adress, payment, total, id_user, data);
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING,"OrderDAO:findById " + e.getMessage());
         } finally {
@@ -43,6 +45,29 @@ public class OrderDAO
             ConnectionFactory.close(dbConnection);
         }
         return toReturn;
+    }
+    public static ArrayList<Order> findOrderByIdUser(int id_user)
+    {
+        ArrayList <Order> list = new ArrayList <Order>();
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement showStatement = null;
+        try {
+            showStatement = dbConnection.prepareStatement(findByIdUserStatementString);
+            showStatement.setInt(1, id_user);
+            ResultSet rs = showStatement.executeQuery();
+            Order order;
+            while(rs.next())
+            {
+                order = new Order(rs.getInt("id_order"),rs.getString("adress"),rs.getString("payment"),rs.getInt("total"),rs.getInt("id_user"), rs.getDate("timp"));
+                list.add(order);
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "ProductDAO:show " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(showStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+        return list;
     }
     public static int insert(Order order)
     {
@@ -56,7 +81,7 @@ public class OrderDAO
             insertStatement.setInt(2, order.getId_user());
             insertStatement.setString(3, order.getAdress());
             insertStatement.setString(4, order.getPayment());
-            insertStatement.setDate(5, (Date) order.getDate());
+            insertStatement.setDate(5, order.getDate());
             insertStatement.executeUpdate();
 
             ResultSet rs = insertStatement.getGeneratedKeys();
@@ -71,6 +96,7 @@ public class OrderDAO
         }
         return insertedId;
     }
+
     public static void update(Order order)
     {
         Connection dbConnection = ConnectionFactory.getConnection();
@@ -87,29 +113,6 @@ public class OrderDAO
             ConnectionFactory.close(updateStatement);
             ConnectionFactory.close(dbConnection);
         }
-    }/*
-	public static ArrayList<Client> getClientList()
-	{
-		ArrayList <Client> list = new ArrayList <Client>();
-		Connection dbConnection = ConnectionFactory.getConnection();
-		PreparedStatement showStatement = null;
-		try {
-			showStatement = dbConnection.prepareStatement(showAllStatementString);
-			ResultSet rs = showStatement.executeQuery();
-			Client client;
-			while(rs.next())
-			{
-				client = new Client(rs.getInt("id_Client"),rs.getString("Name"),rs.getString("Surname"),rs.getString("Email"),rs.getLong("Telephone"));
-				list.add(client);
-			}
-
-		} catch (SQLException e) {
-			LOGGER.log(Level.WARNING, "ClientDAO:show " + e.getMessage());
-		} finally {
-			ConnectionFactory.close(showStatement);
-			ConnectionFactory.close(dbConnection);
-		}
-		return list;
-	}*/
+    }
 }
 

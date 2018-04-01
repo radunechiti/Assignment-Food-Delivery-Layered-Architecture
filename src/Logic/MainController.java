@@ -1,37 +1,41 @@
 package Logic;
 
-import Bll.ProductValidators;
-import Bll.UserValidators;
-import Models.Product;
-import Models.User;
-import View.AdminView;
-import View.Menu;
-import View.CreateUserView;
-import View.UserView;
+import Bll.*;
+import Models.*;
+import View.*;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Date;
+
+import static java.lang.Integer.parseInt;
 
 
-public class Controller {
-    private Menu menu;
+public class MainController {
+    private LoginView loginView;
     private AdminView adminView;
     private CreateUserView createUserView;
     private UserView userView;
+    private IstoricView istoricView;
 
-    public Controller(Menu menu, AdminView adminView, CreateUserView createUserView, UserView userView) {
-        this.menu = menu;
+    public MainController(LoginView loginView, AdminView adminView, CreateUserView createUserView, UserView userView, IstoricView istoricView) {
+        this.loginView = loginView;
         this.adminView = adminView;
         this.createUserView = createUserView;
         this.userView = userView;
-        this.menu.setVisible(true);
+        this.istoricView = istoricView;
+        this.loginView.setVisible(true);
 
-        this.menu.ButtonSignIn(new SignIn_Listener());
-        this.menu.ButtonSignUp(new SignUp_Listener());
+        this.loginView.ButtonSignIn(new SignIn_Listener());
+        this.loginView.ButtonSignUp(new SignUp_Listener());
 
         this.createUserView.ButtonCreateNewAccount(new CreateNewAccount_Listener());
         this.adminView.ClickUser(new ClickUser_Listener());
@@ -45,9 +49,46 @@ public class Controller {
         this.userView.ButtonAddComanda(new ButtonAddComanda_Listener());
         this.userView.ButtonFinishComanda(new ButtonFinishComanda_Listener());
         this.userView.ButtonIstoric(new ButtonIstoric_Listener());
+        this.userView.ClickProducts(new ClickProducts_Listener());
+        this.adminView.ButtonReport(new ButtonReport_Listener());
+
 
     }
+    public class ButtonReport_Listener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+                int i = adminView.jTable1.getSelectedRow();
+                TableModel model = adminView.jTable1.getModel();
+                String email = (String)model.getValueAt(i,1);
+                String password = (String)model.getValueAt(i,1);
+                UserValidators userValidators = new UserValidators();
+                User user = new User(email, password);
+                User logat = userValidators.find(user);
+                try{
+                    PrintStream fout = new PrintStream(new FileOutputStream("Report.txt"));
+                    fout.println("User details");
+                    fout.println("Name: " + logat.getNume());
+                    fout.println("Email: " + logat.getEmail());
+                    fout.println("Loyal: " + logat.getLoyal());
+                    fout.println("Activ: " + logat.getActive());
 
+                    OrderValidators orderValidators = new OrderValidators();
+                    ArrayList <Order> list = orderValidators.findOrderByIdUser(logat.getId());
+                    for(Order o: list)
+                    {
+                        fout.println();
+                        fout.println("Comanda nr: " + o.getId());
+                        fout.println("Adresa: " + o.getAdress());
+                        fout.println("Payment: " + o.getPayment());
+                        fout.println("Total: " + o.getTotal());
+                        fout.println("Date: " + o.getDate());
+                    }
+                }catch(FileNotFoundException e1){
+                    JOptionPane.showMessageDialog(null, "Eroare");
+                }
+        }
+    }
     public class CreateNewAccount_Listener implements ActionListener ///////gata
     {
         public void actionPerformed(ActionEvent e)
@@ -81,9 +122,29 @@ public class Controller {
     {
         public void actionPerformed(ActionEvent e)
         {
-            adminView.setVisible(true);
-            adminView.showUser();
-            adminView.showProduct();
+            String email = loginView.jTextField1.getText().toString();
+            String password = loginView.jPasswordField1.getText().toString();
+            UserValidators userValidators = new UserValidators();
+            User user = userValidators.find(new User(email, password));
+            if (user == null) {
+                AdminValidators adminValidators = new AdminValidators();
+                Admin admin = adminValidators.find(new Admin(email, password));
+                if (admin == null)
+                    System.out.println("eroareeeee");
+                else {
+                    adminView.showUser();
+                    adminView.showProduct();
+                    adminView.setVisible(true);
+                }
+            }
+            else
+            {
+                userView.setVisible(true);
+                ArrayList<Product> list = ProductValidators.getProducts();
+                userView.showProduct(list);
+                userView.jTextField1.setText(String.valueOf(user.getId()));
+                userView.jTextField2.setText(user.getNume());
+            }
         }
     }
     public class ClickUser_Listener implements MouseListener   //gataaaaaaaaaaaaa
@@ -176,8 +237,8 @@ public class Controller {
         {
             try{
                 String name = adminView.jTextField5.getText();
-                int pret = Integer.parseInt(adminView.jTextField6.getText());
-                int quantity = Integer.parseInt(adminView.jTextField7.getText());
+                int pret = parseInt(adminView.jTextField6.getText());
+                int quantity = parseInt(adminView.jTextField7.getText());
 
                 Product product = new Product(name, pret, quantity);
                 ProductValidators productValidators = new ProductValidators();
@@ -199,8 +260,8 @@ public class Controller {
                 TableModel model = adminView.jTable2.getModel();
                 int id = (Integer)model.getValueAt(i,0);
                 String name = adminView.jTextField5.getText();
-                int pret = Integer.parseInt(adminView.jTextField6.getText());
-                int quantity = Integer.parseInt(adminView.jTextField7.getText());
+                int pret = parseInt(adminView.jTextField6.getText());
+                int quantity = parseInt(adminView.jTextField7.getText());
 
                 Product product = new Product(id, name, pret, quantity);
                 ProductValidators productValidators = new ProductValidators();
@@ -233,20 +294,22 @@ public class Controller {
             }
         }
     }
-    public class ButtonAddComanda_Listener implements ActionListener    /////gata
+    public class ButtonAddComanda_Listener implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
         {
             try{
-                int i = adminView.jTable2.getSelectedRow();
-                TableModel model = adminView.jTable2.getModel();
-                int id = (Integer)model.getValueAt(i,0);
-
-                Product product = new Product(id);
+                int id = parseInt(userView.jTextField4.getText());
                 ProductValidators productValidators = new ProductValidators();
-
-                productValidators.deleteProduct(product);
-                adminView.showProduct();
+                Product product= productValidators.findProduct(id);
+                product.setQuantity(parseInt(userView.jTextField7.getText()));
+                ArrayList<Product> list = ProductValidators.getProducts();//update product
+                for(Product p: list)
+                    if(p.getId()==product.getId())
+                        p.setQuantity(p.getQuantity()-product.getQuantity());
+                userView.showProduct(list);
+                userView.showCos(product);
+                userView.setTotal(product.getPrice()*product.getQuantity());
 
             }catch(NumberFormatException exp){
                 JOptionPane.showMessageDialog(null, "Introduceti date valide");
@@ -257,15 +320,41 @@ public class Controller {
     {
         public void actionPerformed(ActionEvent e)
         {
-            try{
-                int i = adminView.jTable2.getSelectedRow();
-                TableModel model = adminView.jTable2.getModel();
-                int id = (Integer)model.getValueAt(i,0);
-
-                Product product = new Product(id);
+            try{  //create order
+                Date date = new Date();
+                java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+                String payment;
+                if(userView.jComboBox1.getSelectedItem().equals("Cash"))
+                    payment = "Cash";
+                else
+                    payment = "Card";
+                Order order = new Order(userView.jTextField6.getText().toString(), parseInt(userView.jTextField3.getText().toString()),parseInt(userView.jTextField1.getText()), sqlDate, payment);
+                OrderValidators orderValidators = new OrderValidators();
+                int id_order = orderValidators.insert(order);
+                //create cos
+                TableModel model3 = userView.jTable2.getModel();
+                int id_product, quantity;
+                String name;
+                CosValidators cosValidators = new CosValidators();
                 ProductValidators productValidators = new ProductValidators();
+                for(int i=0; i<model3.getRowCount(); i++)
+                {
+                    id_product = (Integer) model3.getValueAt(i, 0);
+                    name = (String) model3.getValueAt(i, 1);
+                    quantity = (Integer) model3.getValueAt(i, 3);
 
-                productValidators.deleteProduct(product);
+                    Product product = productValidators.findProduct(id_product);
+                    product.setQuantity(product.getQuantity()-quantity);
+                    cosValidators.insert(new Cos(id_product, id_order, quantity));
+                    productValidators.updateProduct(product);
+                }
+                Istoric istoric = new Istoric(parseInt(userView.jTextField3.getText().toString()), id_order);
+                System.out.println(istoric.getId_User());
+                System.out.println(istoric.getId_Order());
+                IstoricValidators istoricValidators = new IstoricValidators();
+                istoricValidators.insert(istoric);
+                ArrayList<Istoric> list = istoricValidators.showByIdUser(1);
+                istoricView.showIstoric(list);
                 adminView.showProduct();
 
             }catch(NumberFormatException exp){
@@ -277,21 +366,24 @@ public class Controller {
     {
         public void actionPerformed(ActionEvent e)
         {
-            try{
-                int i = adminView.jTable2.getSelectedRow();
-                TableModel model = adminView.jTable2.getModel();
-                int id = (Integer)model.getValueAt(i,0);
-
-                Product product = new Product(id);
-                ProductValidators productValidators = new ProductValidators();
-
-                productValidators.deleteProduct(product);
-                adminView.showProduct();
-
-            }catch(NumberFormatException exp){
-                JOptionPane.showMessageDialog(null, "Introduceti date valide");
-            }
+            istoricView.setVisible(true);
+            int id_user = 1;
+            IstoricValidators istoricValidators = new IstoricValidators();
+            ArrayList<Istoric> list = istoricValidators.showByIdUser(id_user);
+            istoricView.showIstoric(list);
         }
+    }
+
+    public class ClickProducts_Listener implements MouseListener   //gataaaaaaaaaa
+    {
+        public void mouseClicked(java.awt.event.MouseEvent e)
+        {
+            userView.showClickProduct();
+        }
+        public void mouseEntered(java.awt.event.MouseEvent e) {}	 //cod inutil dar necesar pentru a functiona mouseListener
+        public void mouseExited(java.awt.event.MouseEvent e) {}
+        public void mousePressed(java.awt.event.MouseEvent e) {}
+        public void mouseReleased(java.awt.event.MouseEvent e) {}
     }
 
 }

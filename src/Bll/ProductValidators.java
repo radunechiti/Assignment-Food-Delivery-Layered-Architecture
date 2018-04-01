@@ -17,9 +17,9 @@ public class ProductValidators {
         validators.add(new QuantityValidator());
     }
 
-    public Product findProduct(Product product)
+    public static Product findProduct(int id_product)
     {
-        return ProductDAO.findProduct(product);
+        return ProductDAO.findProductById(id_product);
     }
     public void insertProduct(Product product)
     {

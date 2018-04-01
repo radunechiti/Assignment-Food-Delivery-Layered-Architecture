@@ -30,7 +30,7 @@ public class CosDAO
         PreparedStatement showStatement = null;
         try {
             showStatement = dbConnection.prepareStatement(showCurrentStatementString);
-            showStatement.setLong(1, id_Order);
+            showStatement.setInt(1, id_Order);
             ResultSet rs = showStatement.executeQuery();
             Cos cos;
             while(rs.next())
@@ -38,7 +38,6 @@ public class CosDAO
                 cos = new Cos(rs.getInt("id_ProductOrder"),rs.getInt("id_Product"),rs.getInt("id_Order"),rs.getInt("Quantity"));
                 list.add(cos);
             }
-
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, "ProductDAO:show " + e.getMessage());
         } finally {
@@ -62,7 +61,7 @@ public class CosDAO
 
            // Product product = ProductValidators.findProduct(productOrder.getId_Product());
             //product.setQuantity(product.getQuantity()-productOrder.getQuantity());
-            //ProductDAO.update(product);
+            //ProductDAO.update(product);   //trebuie facuta in controller
 
             ResultSet rs = insertStatement.getGeneratedKeys();
             if (rs.next()) {

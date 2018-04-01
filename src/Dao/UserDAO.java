@@ -16,7 +16,7 @@ public class UserDAO {
 
     protected static final Logger LOGGER = Logger.getLogger(UserDAO.class.getName());
     private static final String insertStatementString = "INSERT INTO user (email, pass, nume, active, loyal)" + " VALUES (?,?,?,?,?)";
-    private final static String findStatementString = "SELECT * FROM user where id_user = ?";
+    private final static String findStatementString = "SELECT * FROM user where email = ? and pass = ?";
     private static final String deleteStatementString = "UPDATE user SET active=? WHERE id_user=?";
     private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, active=?,loyal=? WHERE id_user=?";
     private static final String showAllStatementString = "SELECT * FROM user";
@@ -30,15 +30,17 @@ public class UserDAO {
         ResultSet rs = null;
         try{
             findStatement = dbConnection.prepareStatement(findStatementString);
-            findStatement.setLong(1, user.getId());
+            findStatement.setString(1, user.getEmail());
+            findStatement.setString(2, user.getPassword());
             rs = findStatement.executeQuery();
             rs.next();
+            int id_user = rs.getInt("id_user");
             String email = rs.getString("email");
             String password = rs.getString("pass");
             String nume = rs.getString("nume");
             boolean active = rs.getBoolean("active");
             boolean loyal = rs.getBoolean("loyal");
-            toReturn = new User(user.getId(), email, password, nume, active, loyal);
+            toReturn = new User(id_user, email, password, nume, active, loyal);
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING,"ClientDAO:findById " + e.getMessage());
         } finally {

@@ -23,7 +23,7 @@ public class ProductDAO {
     private static final String updateStatementString = "UPDATE product SET nume=?, price=?, quantity=? WHERE id_product=?";
     private static final String showAllStatementString = "SELECT * FROM product";
 
-    public static Product findProductById(int idProduct)
+    public static Product findProductById(int id_product)
     {
         Product toReturn = null;
 
@@ -32,14 +32,14 @@ public class ProductDAO {
         ResultSet rs = null;
         try{
             findStatement = dbConnection.prepareStatement(findStatementString);
-            findStatement.setInt(1, idProduct);
+            findStatement.setInt(1, id_product);
             rs = findStatement.executeQuery();
             rs.next();
 
             String name = rs.getString("nume");
             int price = rs.getInt("price");
             int quantity = rs.getInt("quantity");
-            toReturn = new Product(idProduct, name, price, quantity);
+            toReturn = new Product(id_product, name, price, quantity);
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING,"ProductDAO:findById " + e.getMessage());
         } finally {
@@ -113,7 +113,7 @@ public class ProductDAO {
     }
     public static ArrayList<Product> getProducts()
     {
-        ArrayList <Product> list = new ArrayList <Product>();
+        ArrayList <Product> list = new ArrayList<Product>();
         Connection dbConnection = ConnectionFactory.getConnection();
         PreparedStatement showStatement = null;
         try {

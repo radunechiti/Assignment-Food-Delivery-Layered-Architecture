@@ -1,9 +1,5 @@
 package Models;
 
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-
 import java.util.Date;
 
 public class Order {
@@ -13,16 +9,23 @@ public class Order {
     private String payment;
     private int total;
     private int id_user;
-    private Date date;
+    private java.sql.Date date;
 
-    public Order(int id, String adress, int total, int id_user, Date date, String payment) {
-        this.id = id;
+    public Order(String adress, int total, int id_user, java.sql.Date data, String payment) {
         this.adress = adress;
         this.total = total;
         this.id_user = id_user;
-        this.date = date;
+        java.sql.Date date = data;
         this.payment = payment;
+    }
 
+    public Order(int id, String adress, String payment, int total, int id_user, java.sql.Date data) {
+        this.id = id;
+        this.adress = adress;
+        this.payment = payment;
+        this.total = total;
+        this.id_user = id_user;
+        java.sql.Date date = data;
     }
 
     public int getId() {
@@ -57,11 +60,11 @@ public class Order {
         this.id_user = id_user;
     }
 
-    public Date getDate() {
+    public java.sql.Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(java.sql.Date date) {
         this.date = date;
     }
 

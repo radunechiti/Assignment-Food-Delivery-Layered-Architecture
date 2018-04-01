@@ -9,7 +9,9 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 
+import Bll.CosValidators;
 import Bll.ProductValidators;
+import Models.Cos;
 import Models.Product;
 import Models.User;
 
@@ -18,10 +20,11 @@ public class UserView extends JFrame
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -32,16 +35,20 @@ public class UserView extends JFrame
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    public javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable2;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    public javax.swing.JTextField jTextField6;
+    public javax.swing.JTextField jTextField7;
+    public javax.swing.JTextField jTextField8;
+    public javax.swing.JTextField jTextField9;
+
+    ArrayList<Product> cos = new ArrayList<Product>();
+    private int total = 0;
     public void ButtonAddComanda(ActionListener e)
     {
         jButton1.addActionListener(e);
@@ -54,14 +61,13 @@ public class UserView extends JFrame
     {
         jButton3.addActionListener(e);
     }
-    public void OrderProduct(MouseListener e)
+    public void ClickProducts(MouseListener e)
     {
-        jTable2.addMouseListener(e);
+        jTable1.addMouseListener(e);
     }
-    public void showProduct()
+    public void showProduct(ArrayList<Product> list) //gata
     {
-        ArrayList<Product> list = ProductValidators.getProducts();
-        DefaultTableModel model = (DefaultTableModel)jTable2.getModel();
+        DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
         model.setRowCount(0);
         Object[] row = new Object[4];
         for(int i=0; i<list.size(); i++)
@@ -72,50 +78,50 @@ public class UserView extends JFrame
             row[3]= list.get(i).getQuantity();
             model.addRow(row);
         }
-        jTable2.setModel(model);
+        jTable1.setModel(model);
         model.fireTableDataChanged();
     }
-    public void showProduct1(int id_Order)
+    public void showCos(Product product)             //gata
     {
-        /*ArrayList<Cos> list = CosValidators.findByOrder(id_Order);
-        ArrayList<Product> list1 = new ArrayList<Product>();
-        for(Cos ls: list)
+        cos.add(product);
+        DefaultTableModel model2 = (DefaultTableModel)jTable2.getModel();
+        model2.setRowCount(0);
+        Object[] row1 = new Object[5];
+        for(int i=0; i<cos.size(); i++)
         {
-            //Product product = ProductBLL.findProduct(ls.getId_Product());
-            list1.add(product);
+            row1[0]= cos.get(i).getId();
+            row1[1]= cos.get(i).getName();
+            row1[2]= cos.get(i).getPrice();
+            row1[3]= cos.get(i).getQuantity();
+            row1[4]= cos.get(i).getQuantity()*cos.get(i).getPrice();
+            model2.addRow(row1);
         }
-        DefaultTableModel model1 = (DefaultTableModel)jTable1.getModel();
-        model1.setRowCount(0);
-        Object[] row1 = new Object[4];
-        for(int i=0; i<list1.size(); i++)
-        {
-            row1[0]= list1.get(i).getName();
-            row1[1]= list1.get(i).getPrice();
-            row1[2]= list.get(i).getQuantity();
-            row1[3]= list.get(i).getQuantity()*list1.get(i).getPrice();
-            model1.addRow(row1);
-        }
-        jTable1.setModel(model1);
-        model1.fireTableDataChanged();*/
+        jTable2.setModel(model2);
+        model2.fireTableDataChanged();
     }
-    public void showDetailsProduct()
+    public void showClickProduct()                   //gata
     {
-        int i = jTable2.getSelectedRow();
-        TableModel model = jTable2.getModel();
-        jTextField5.setText(model.getValueAt(i, 0).toString());
-        jTextField6.setText(model.getValueAt(i, 1).toString());
-        jTextField7.setText(model.getValueAt(i, 2).toString());
+        int i = jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        jTextField4.setText(model.getValueAt(i, 0).toString());
+        jTextField5.setText(model.getValueAt(i, 1).toString());
+        jTextField6.setText(model.getValueAt(i, 2).toString());
     }
-    public void showDetailsClient(User user)
+    public void showDetailsClient(User user)         //gata
     {
-        jTextField4.setText(Integer.toString(user.getId()));
-        jTextField2.setText(user.getEmail());
-        jTextField3.setText(user.getNume());
+        jTextField1.setText(user.getEmail());
+        jTextField2.setText(user.getNume());
+        if(user.getLoyal()==true)
+            jTextField9.setText("5%");
+        else
+            jTextField9.setText("0%");
     }
-    public void setTotal(int total)
+    public void setTotal(int total)                  //gata
     {
-        jTextField1.setText(Integer.toString(total));
+        this.total +=total;
+        jTextField8.setText(Integer.toString(this.total));
     }
+
     public UserView()
     {
 
@@ -146,8 +152,10 @@ public class UserView extends JFrame
         jButton3 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
@@ -156,7 +164,22 @@ public class UserView extends JFrame
                 new String [] {
                         "Id", "Food", "Price", "Quantity"
                 }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                    java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                    false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
@@ -170,9 +193,24 @@ public class UserView extends JFrame
 
                 },
                 new String [] {
-                        "Product", "Price", "Quantity", "Total Price"
+                        "Id", "Product", "Price", "Quantity", "Total Price"
                 }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                    java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                    false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
             jTable2.getColumnModel().getColumn(0).setResizable(false);
@@ -183,9 +221,9 @@ public class UserView extends JFrame
 
         jLabel1.setText("User");
 
-        jLabel2.setText("Nume");
+        jLabel2.setText("Id");
 
-        jLabel3.setText("Email");
+        jLabel3.setText("Nume");
 
         jLabel4.setText("Address");
 
@@ -210,6 +248,8 @@ public class UserView extends JFrame
         jButton3.setText("Vizualizare istoric");
 
         jLabel11.setText("Total Price");
+
+        jLabel12.setText("Discount");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -262,12 +302,17 @@ public class UserView extends JFrame
                                                 .addGap(38, 38, 38)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(jLabel11)
-                                                        .addGap(46, 46, 46)
-                                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel11)
+                                                                .addGap(46, 46, 46)
+                                                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(58, 58, 58)
+                                                .addComponent(jLabel12)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,7 +357,9 @@ public class UserView extends JFrame
                                         .addComponent(jLabel4)
                                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel11)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel12)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(22, 22, 22)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel10)
@@ -323,12 +370,14 @@ public class UserView extends JFrame
                                 .addContainerGap())
         );
 
+
         jTextField1.setEditable(false);
         jTextField2.setEditable(false);
         jTextField4.setEditable(false);
         jTextField5.setEditable(false);
         jTextField6.setEditable(false);
         jTextField8.setEditable(false);
+        jTextField9.setEditable(false);
         pack();
     }
 }

@@ -5,15 +5,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class Menu extends JFrame
+public class LoginView extends JFrame
 {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JPasswordField jPasswordField1;
+    public javax.swing.JTextField jTextField1;
 
     public void ButtonSignIn(ActionListener e)
     {
@@ -23,7 +23,7 @@ public class Menu extends JFrame
     {
         jButton2.addActionListener(e);
     }
-    public Menu()
+    public LoginView()
     {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(375, 300));

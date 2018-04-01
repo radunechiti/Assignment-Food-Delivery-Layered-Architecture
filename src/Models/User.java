@@ -23,6 +23,11 @@ public class User {
         this.id=id;
     }
 
+    public User(String password, String email) {
+        this.password = password;
+        this.email = email;
+    }
+
     public User(String password, String email, String nume, boolean active, boolean loyal) {
         this.password = password;
         this.email = email;
