@@ -32,6 +32,12 @@ public class UserValidators {
             v.validate(user);
         UserDAO.updateUser(user);
     }
+    public void updateUserDetails(User user)
+    {
+        for(Validator<User> v: validators)
+            v.validate(user);
+        UserDAO.updateUserDetails(user);
+    }
 
     public void delete(User user)
     {

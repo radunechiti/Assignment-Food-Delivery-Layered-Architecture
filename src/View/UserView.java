@@ -41,11 +41,13 @@ public class UserView extends JFrame
     public javax.swing.JTextField jTextField2;
     public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    public javax.swing.JTextField jTextField5;
     public javax.swing.JTextField jTextField6;
     public javax.swing.JTextField jTextField7;
     public javax.swing.JTextField jTextField8;
     public javax.swing.JTextField jTextField9;
+    ProductValidators productValidators = new ProductValidators();
+    private javax.swing.JButton jButton4;
 
     ArrayList<Product> cos = new ArrayList<Product>();
     private int total = 0;
@@ -64,6 +66,10 @@ public class UserView extends JFrame
     public void ClickProducts(MouseListener e)
     {
         jTable1.addMouseListener(e);
+    }
+    public void UpdateDetails(ActionListener e)
+    {
+        jButton4.addActionListener(e);
     }
     public void showProduct(ArrayList<Product> list) //gata
     {
@@ -150,6 +156,7 @@ public class UserView extends JFrame
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
@@ -251,6 +258,8 @@ public class UserView extends JFrame
 
         jLabel12.setText("Discount");
 
+        jButton4.setText("Update User");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -270,22 +279,27 @@ public class UserView extends JFrame
                                                                 .addGap(82, 82, 82))
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                                 .addGap(18, 18, 18)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(jLabel2)
-                                                                        .addComponent(jLabel3)
-                                                                        .addComponent(jLabel8)
-                                                                        .addComponent(jLabel7)
-                                                                        .addComponent(jLabel5)
-                                                                        .addComponent(jLabel6))
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                        .addComponent(jTextField2)
-                                                                        .addComponent(jTextField1)
-                                                                        .addComponent(jTextField4)
-                                                                        .addComponent(jTextField6)
-                                                                        .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addComponent(jTextField5)
-                                                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                                .addComponent(jButton4))
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                        .addComponent(jLabel2)
+                                                                                        .addComponent(jLabel3)
+                                                                                        .addComponent(jLabel8)
+                                                                                        .addComponent(jLabel7)
+                                                                                        .addComponent(jLabel5)
+                                                                                        .addComponent(jLabel6))
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                                        .addComponent(jTextField2)
+                                                                                        .addComponent(jTextField1)
+                                                                                        .addComponent(jTextField4)
+                                                                                        .addComponent(jTextField6)
+                                                                                        .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                        .addComponent(jTextField5)
+                                                                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))))
                                                                 .addGap(62, 62, 62))))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addContainerGap()
@@ -365,11 +379,12 @@ public class UserView extends JFrame
                                         .addComponent(jLabel10)
                                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jButton2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                .addComponent(jButton4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3)
                                 .addContainerGap())
         );
-
 
         jTextField1.setEditable(false);
         jTextField2.setEditable(false);

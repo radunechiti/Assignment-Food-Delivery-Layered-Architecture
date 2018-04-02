@@ -21,6 +21,7 @@ public class UserDAO {
     private final static String findStatementString = "SELECT * FROM user where email = ? and pass = ?";
     private static final String deleteStatementString = "UPDATE user SET active=? WHERE id_user=?";
     private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, active=?,loyal=? WHERE id_user=?";
+    private static final String updateUserStatementString = "UPDATE user SET email=?, pass=?, nume=? WHERE id_user=?";
     private static final String showAllStatementString = "SELECT * FROM user";
 
     public static User findUser(User user)
@@ -112,6 +113,26 @@ public class UserDAO {
             updateStatement.setBoolean(4, user.getActive());
             updateStatement.setBoolean(5, user.getLoyal());
             updateStatement.setInt(6, user.getId());
+
+            updateStatement.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "UserDAO:update " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "This email is already used");
+        } finally {
+            ConnectionFactory.close(updateStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+    }
+    public static void updateUserDetails(User user)
+    {
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement updateStatement = null;
+        try {
+            updateStatement = dbConnection.prepareStatement(updateUserStatementString);
+            updateStatement.setString(1, user.getEmail());
+            updateStatement.setString(2, user.getPassword());
+            updateStatement.setString(3, user.getNume());
+            updateStatement.setInt(4, user.getId());
 
             updateStatement.executeUpdate();
         } catch (SQLException e) {

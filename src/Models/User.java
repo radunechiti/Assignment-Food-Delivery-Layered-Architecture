@@ -35,6 +35,12 @@ public class User {
         this.active = active;
         this.loyal = loyal;
     }
+    public User(int id, String password, String email, String nume) {
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.nume = nume;
+    }
 
     public int getId() {
         return id;

@@ -17,7 +17,6 @@ public class ProductValidators {
         this.validators =  new ArrayList<Validator<Product>>();
         validators.add(new QuantityValidator());
         validators.add(new PriceValidator());
-        validators.add(new ProductExistValidator());
     }
 
     public static Product findProduct(int id_product)

@@ -13,6 +13,7 @@ public class Main {
         CreateUserView createUserView = new CreateUserView();
         UserView userView = new UserView();
         IstoricView istoricView = new IstoricView();
-        MainController mainController = new MainController(loginView,adminView,createUserView,userView, istoricView);
+        UpdateUserView updateUserView = new UpdateUserView();
+        MainController mainController = new MainController(loginView,adminView,createUserView,userView, istoricView, updateUserView);
     }
 }
