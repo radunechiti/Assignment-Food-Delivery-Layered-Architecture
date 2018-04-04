@@ -38,8 +38,6 @@ public class ProductValidators {
 
     public void deleteProduct(Product product)
     {
-        for(Validator<Product> v: validators)
-            v.validate(product);
         ProductDAO.deleteProduct(product);
     }
 

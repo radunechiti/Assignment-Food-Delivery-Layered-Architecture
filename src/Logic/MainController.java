@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -61,7 +62,7 @@ public class MainController {
 
 
     }
-    private static String securePassword(String password) throws Exception   //gata
+    private static String securePassword(String password) throws Exception   //gata-----------------------------
     {
         StringBuffer sb =  new StringBuffer();
         try{
@@ -79,17 +80,15 @@ public class MainController {
         }
         return sb.toString();
     }
-    public class ButtonReport_Listener implements ActionListener   //poate ca mai trebuie sa adaug si produsele?????
+    public class ButtonReport_Listener implements ActionListener        //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
                 int i = adminView.jTable1.getSelectedRow();
                 TableModel model = adminView.jTable1.getModel();
-                String email = (String)model.getValueAt(i,1);
-                String password = (String)model.getValueAt(i,1);
+                int id_user = (int)(model.getValueAt(i,0));
                 UserValidators userValidators = new UserValidators();
-                User user = new User(email, password);
-                User logat = userValidators.find(user);
+                User logat = userValidators.findById(id_user);
                 try{
                     PrintStream fout = new PrintStream(new FileOutputStream("Report.txt"));
                     fout.println("User details");
@@ -107,14 +106,15 @@ public class MainController {
                         fout.println("Adresa: " + o.getAdress());
                         fout.println("Payment: " + o.getPayment());
                         fout.println("Total: " + o.getTotal());
-                        fout.println("Date: " + o.getDate());
+                        fout.println("Date: " + o.getTime());
                     }
+                    JOptionPane.showMessageDialog(null, "Ati generat un raport!");
                 }catch(FileNotFoundException e1){
                     JOptionPane.showMessageDialog(null, "Eroare");
                 }
         }
     }
-    public class CreateNewAccount_Listener implements ActionListener  //gata----------------------------------
+    public class CreateNewAccount_Listener implements ActionListener    //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -136,7 +136,7 @@ public class MainController {
             }
         }
     }
-    public class SignUp_Listener implements ActionListener            //gata----------------------------------
+    public class SignUp_Listener implements ActionListener              //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -150,7 +150,7 @@ public class MainController {
             updateUserView.setVisible(true);
         }
     }
-    public class SignIn_Listener implements ActionListener            //gata----------------------------------
+    public class SignIn_Listener implements ActionListener              //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -178,12 +178,7 @@ public class MainController {
                     userView.setVisible(true);
                     ArrayList<Product> list = ProductValidators.getProducts();
                     userView.showProduct(list);
-                    userView.jTextField1.setText(String.valueOf(user.getId()));
-                    userView.jTextField2.setText(user.getNume());
-                    if(user.getLoyal())
-                        userView.jTextField9.setText("5%");
-                    else
-                        userView.jTextField9.setText("5%");
+                    userView.showDetailsClient(user);
                     loginView.jTextField1.setText("");
                     loginView.jPasswordField1.setText("");
                 }
@@ -192,7 +187,7 @@ public class MainController {
             }
         }
     }
-    public class ClickUser_Listener implements MouseListener          //gata----------------------------------
+    public class ClickUser_Listener implements MouseListener            //gata----------------------------------
     {
         public void mouseClicked(java.awt.event.MouseEvent e)
         {
@@ -203,7 +198,7 @@ public class MainController {
         public void mousePressed(java.awt.event.MouseEvent e) {}
         public void mouseReleased(java.awt.event.MouseEvent e) {}
     }
-    public class ClickProduct_Listener implements MouseListener       //gata----------------------------------
+    public class ClickProduct_Listener implements MouseListener         //gata----------------------------------
     {
         public void mouseClicked(java.awt.event.MouseEvent e)
         {
@@ -214,7 +209,7 @@ public class MainController {
         public void mousePressed(java.awt.event.MouseEvent e) {}
         public void mouseReleased(java.awt.event.MouseEvent e) {}
     }
-    public class ButtonAddUser_Listener implements ActionListener     //gata----------------------------------
+    public class ButtonAddUser_Listener implements ActionListener       //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -235,7 +230,7 @@ public class MainController {
                 JOptionPane.showMessageDialog(null, exp.getMessage()); }
         }
     }
-    public class ButtonUpdateUser_Listener implements ActionListener  //gata----------------------------------
+    public class ButtonUpdateUser_Listener implements ActionListener    //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -266,7 +261,7 @@ public class MainController {
             }
         }
     }
-    public class ButtonDeleteUser_Listener implements ActionListener  //gata----------------------------------
+    public class ButtonDeleteUser_Listener implements ActionListener    //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -297,7 +292,7 @@ public class MainController {
             }
         }
     }
-    public class ButtonAddProduct_Listener implements ActionListener  //gata----------------------------------
+    public class ButtonAddProduct_Listener implements ActionListener    //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -319,7 +314,7 @@ public class MainController {
             }
         }
     }
-    public class ButtonUpdateProduct_Listener implements ActionListener   //gata------------------------------
+    public class ButtonUpdateProduct_Listener implements ActionListener //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -345,7 +340,7 @@ public class MainController {
             }
         }
     }
-    public class ButtonDeleteProduct_Listener implements ActionListener   //gata------------------------------
+    public class ButtonDeleteProduct_Listener implements ActionListener //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
@@ -368,23 +363,17 @@ public class MainController {
             }
         }
     }
-    public class ButtonAddComanda_Listener implements ActionListener
+    public class ButtonAddComanda_Listener implements ActionListener    //gata----------------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
             try{
                 int id = Integer.parseInt(userView.jTextField4.getText());
-                System.out.println(id);
                 ProductValidators productValidators = new ProductValidators();
                 Product product= productValidators.findProduct(id);
-                if(Integer.parseInt(userView.jTextField7.getText())>product.getQuantity())
+                if(Integer.parseInt(userView.jTextField7.getText())>product.getQuantity() || Integer.parseInt(userView.jTextField7.getText())==0)
                     throw new Exception("Cantitate prea mare");
-                product.setQuantity(parseInt(userView.jTextField7.getText()));
-                ArrayList<Product> list = ProductValidators.getProducts();
-                for(Product p: list)
-                    if(p.getId()==product.getId())
-                        p.setQuantity(p.getQuantity()-product.getQuantity());
-                userView.showProduct(list);
+                product.setQuantity(Integer.parseInt(userView.jTextField7.getText()));
                 userView.showCos(product);
                 int total;
                 if(userView.jTextField9.getText().equals("5%"))
@@ -392,54 +381,61 @@ public class MainController {
                 else
                     total = (int)(product.getPrice()*product.getQuantity());
                 userView.setTotal(total);
-
+                userView.jTextField7.setText("");
             }catch(Exception exp){
                 JOptionPane.showMessageDialog(null, exp.getMessage());
             }
         }
     }
-    public class ButtonFinishComanda_Listener implements ActionListener
+    public class ButtonFinishComanda_Listener implements ActionListener       //gata----------------------------
     {
         public void actionPerformed(ActionEvent e)
         {
             try{  //create order
-                Date date = new Date();
-                java.sql.Date sqlDate = new java.sql.Date(date.getTime());
                 String payment;
                 if(userView.jComboBox1.getSelectedItem().equals("Cash"))
                     payment = "Cash";
                 else
                     payment = "Card";
-
-                Order order = new Order(userView.jTextField3.getText().toString(), Integer.parseInt(userView.jTextField8.getText().toString()),parseInt(userView.jTextField1.getText()), sqlDate, payment);
-                OrderValidators orderValidators = new OrderValidators();
-                int id_order = orderValidators.insert(order);
+                Order order = new Order(userView.jTextField3.getText().toString(), Integer.parseInt(userView.jTextField8.getText().toString()),parseInt(userView.jTextField1.getText()), new Timestamp(System.currentTimeMillis()), payment);
                 //create cos
                 TableModel model3 = userView.jTable2.getModel();
-                int id_product, quantity;
-                String name;
                 CosValidators cosValidators = new CosValidators();
                 ProductValidators productValidators = new ProductValidators();
-                for(int i=0; i<model3.getRowCount(); i++)
-                {
-                    id_product = (Integer) model3.getValueAt(i, 0);
-                    name = (String) model3.getValueAt(i, 1);
-                    quantity = (Integer) model3.getValueAt(i, 3);
-
-                    Product product = productValidators.findProduct(id_product);
-                    product.setQuantity(product.getQuantity()-quantity);
-                    productValidators.updateProduct(product);
-                    cosValidators.insert(new Cos(id_product, id_order, quantity));
+                ArrayList<Product> produseDisponibile =  productValidators.getProducts();
+                for(int i=0; i<model3.getRowCount(); i++) {
+                    int id_product = (Integer) model3.getValueAt(i, 0);
+                    int quantity = (Integer) model3.getValueAt(i, 3);
+                    for (Product product : produseDisponibile) {
+                        if (product.getId() == id_product)
+                            product.setQuantity(product.getQuantity() - quantity);
+                        if (product.getQuantity() < 0) {
+                            userView.curatare();
+                            throw new Exception("Cantitate prea mare");
+                        }
+                    }
                 }
+
+                //create order
+                OrderValidators orderValidators = new OrderValidators();
+                int id_order = orderValidators.insert(order);
+                //update produse baza date
+                for(Product product: produseDisponibile) {
+                    Product produs = productValidators.findProduct(product.getId());
+                    cosValidators.insert(new Cos(product.getId(), id_order, produs.getQuantity() - product.getQuantity()));
+                    productValidators.updateProduct(product);
+                }
+
                 Istoric istoric = new Istoric(parseInt(userView.jTextField1.getText().toString()), id_order);
-                System.out.println(istoric.getId_User());
-                System.out.println(istoric.getId_Order());
                 IstoricValidators istoricValidators = new IstoricValidators();
                 istoricValidators.insert(istoric);
-                ArrayList<Istoric> list = istoricValidators.getIstoricByIdUser(parseInt(userView.jTextField1.getText().toString()));
-                istoricView.showIstoric(list);
+                ArrayList<Order> orders =  orderValidators.findOrderByIdUser((Integer.parseInt(userView.jTextField1.getText())));
+                istoricView.showIstoric(orders);
                 adminView.showProduct();
-
+                JOptionPane.showMessageDialog(null, "Comanda a fost efectuata!");
+                userView.curatare();
+                ArrayList<Product> list = ProductValidators.getProducts();
+                userView.showProduct(list);
             }catch(Exception exp){
                 JOptionPane.showMessageDialog(null, exp.getMessage());
             }
@@ -450,12 +446,12 @@ public class MainController {
         public void actionPerformed(ActionEvent e)
         {
             istoricView.setVisible(true);
-            IstoricValidators istoricValidators = new IstoricValidators();
-            ArrayList<Istoric> list = istoricValidators.getIstoricByIdUser(Integer.parseInt(userView.jTextField1.getText()));
-            istoricView.showIstoric(list);
+            OrderValidators orderValidators =  new OrderValidators();
+            ArrayList<Order> orders =  orderValidators.findOrderByIdUser((Integer.parseInt(userView.jTextField1.getText())));
+            istoricView.showIstoric(orders);
         }
     }
-    public class ClickProducts_Listener implements MouseListener              //gata----------------------
+    public class ClickProducts_Listener implements MouseListener              //gata-----------------------------
     {
         public void mouseClicked(java.awt.event.MouseEvent e)
         {
@@ -466,7 +462,7 @@ public class MainController {
         public void mousePressed(java.awt.event.MouseEvent e) {}
         public void mouseReleased(java.awt.event.MouseEvent e) {}
     }
-    public class ButtonUpdateUserDetails_Listener implements ActionListener  //gata----------------------------------
+    public class ButtonUpdateUserDetails_Listener implements ActionListener   //gata-----------------------------
     {
         public void actionPerformed(ActionEvent e)
         {

@@ -19,6 +19,7 @@ public class UserDAO {
     protected static final Logger LOGGER = Logger.getLogger(UserDAO.class.getName());
     private static final String insertStatementString = "INSERT INTO user (email, pass, nume, active, loyal)" + " VALUES (?,?,?,?,?)";
     private final static String findStatementString = "SELECT * FROM user where email = ? and pass = ?";
+    private final static String findByIdStatementString = "SELECT * FROM user where id_user=?";
     private static final String deleteStatementString = "UPDATE user SET active=? WHERE id_user=?";
     private static final String updateStatementString = "UPDATE user SET email=?, pass=?, nume=?, active=?,loyal=? WHERE id_user=?";
     private static final String updateUserStatementString = "UPDATE user SET email=?, pass=?, nume=? WHERE id_user=?";
@@ -38,6 +39,33 @@ public class UserDAO {
             rs = findStatement.executeQuery();
             rs.next();
             int id_user = rs.getInt("id_user");
+            String email = rs.getString("email");
+            String password = rs.getString("pass");
+            String nume = rs.getString("nume");
+            boolean active = rs.getBoolean("active");
+            boolean loyal = rs.getBoolean("loyal");
+            toReturn = new User(id_user, password, email, nume, active, loyal);
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING,"UserDAO:findById " + e.getMessage());
+        } finally {
+            ConnectionFactory.close(rs);
+            ConnectionFactory.close(findStatement);
+            ConnectionFactory.close(dbConnection);
+        }
+        return toReturn;
+    }
+    public static User findUserById(int id_user)
+    {
+        User toReturn = null;
+
+        Connection dbConnection = ConnectionFactory.getConnection();
+        PreparedStatement findStatement = null;
+        ResultSet rs = null;
+        try{
+            findStatement = dbConnection.prepareStatement(findByIdStatementString);
+            findStatement.setInt(1, id_user);
+            rs = findStatement.executeQuery();
+            rs.next();
             String email = rs.getString("email");
             String password = rs.getString("pass");
             String nume = rs.getString("nume");

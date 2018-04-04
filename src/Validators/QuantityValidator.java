@@ -6,7 +6,7 @@ import Models.Product;
 
 public class QuantityValidator implements Validator<Product>
 {
-    private static final int MIN_Quantity = 1;
+    private static final int MIN_Quantity = 0;
     private static final int MAX_Quantity = 10000;
     public void validate(Product p)
     {

@@ -105,6 +105,17 @@ public class UserView extends JFrame
         jTable2.setModel(model2);
         model2.fireTableDataChanged();
     }
+    public void curatare()
+    {
+        cos.clear();
+        DefaultTableModel model2 = (DefaultTableModel)jTable2.getModel();
+        model2.getDataVector().removeAllElements();
+        model2.fireTableDataChanged();
+        this.total=0;
+        jTextField3.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+    }
     public void showClickProduct()                   //gata
     {
         int i = jTable1.getSelectedRow();
@@ -115,8 +126,9 @@ public class UserView extends JFrame
     }
     public void showDetailsClient(User user)         //gata
     {
-        jTextField1.setText(user.getEmail());
+        jTextField1.setText(String.valueOf(user.getId()));
         jTextField2.setText(user.getNume());
+        System.out.println(user.getLoyal());
         if(user.getLoyal()==true)
             jTextField9.setText("5%");
         else

@@ -1,6 +1,6 @@
 package Models;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class Order {
 
@@ -9,23 +9,23 @@ public class Order {
     private String payment;
     private int total;
     private int id_user;
-    private java.sql.Date date;
+    private Timestamp time;
 
-    public Order(String adress, int total, int id_user, java.sql.Date data, String payment) {
+    public Order(String adress, int total, int id_user, Timestamp time, String payment) {
         this.adress = adress;
         this.total = total;
         this.id_user = id_user;
-        java.sql.Date date = data;
+        this.time = time;
         this.payment = payment;
     }
 
-    public Order(int id, String adress, String payment, int total, int id_user, java.sql.Date data) {
+    public Order(int id, String adress, String payment, int total, int id_user, Timestamp time) {
         this.id = id;
         this.adress = adress;
         this.payment = payment;
         this.total = total;
         this.id_user = id_user;
-        java.sql.Date date = data;
+        this.time = time;
     }
 
     public int getId() {
@@ -60,12 +60,12 @@ public class Order {
         this.id_user = id_user;
     }
 
-    public java.sql.Date getDate() {
-        return date;
+    public Timestamp getTime() {
+        return time;
     }
 
-    public void setDate(java.sql.Date date) {
-        this.date = date;
+    public void setTime(Timestamp time) {
+        this.time = time;
     }
 
     public String getPayment() {

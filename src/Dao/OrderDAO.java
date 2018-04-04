@@ -34,8 +34,8 @@ public class OrderDAO
             int id_user = rs.getInt("id_user");
             String adress = rs.getString("adress");
             String payment = rs.getString("payment");
-            Date data = rs.getDate("timp");
-            toReturn = new Order(id_Order, adress, payment, total, id_user, data);
+            Timestamp time = rs.getTimestamp("timp");
+            toReturn = new Order(id_Order, adress, payment, total, id_user, time);
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING,"OrderDAO:findById " + e.getMessage());
         } finally {
@@ -57,7 +57,7 @@ public class OrderDAO
             Order order;
             while(rs.next())
             {
-                order = new Order(rs.getInt("id_order"),rs.getString("adress"),rs.getString("payment"),rs.getInt("total"),rs.getInt("id_user"), rs.getDate("timp"));
+                order = new Order(rs.getInt("id_order"),rs.getString("adress"),rs.getString("payment"),rs.getInt("total"),rs.getInt("id_user"), rs.getTimestamp("timp"));
                 list.add(order);
             }
         } catch (SQLException e) {
@@ -80,7 +80,7 @@ public class OrderDAO
             insertStatement.setInt(2, order.getId_user());
             insertStatement.setString(3, order.getAdress());
             insertStatement.setString(4, order.getPayment());
-            insertStatement.setDate(5, order.getDate());
+            insertStatement.setTimestamp(5, order.getTime());
             insertStatement.executeUpdate();
 
             ResultSet rs = insertStatement.getGeneratedKeys();

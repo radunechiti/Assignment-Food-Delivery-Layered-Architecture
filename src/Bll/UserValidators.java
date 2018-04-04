@@ -20,6 +20,10 @@ public class UserValidators {
     {
         return UserDAO.findUser(user);
     }
+    public User findById(int id_user)
+    {
+        return UserDAO.findUserById(id_user);
+    }
     public void insert(User user)
     {
         for(Validator<User> v: validators)
