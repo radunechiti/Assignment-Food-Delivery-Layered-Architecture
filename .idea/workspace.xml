@@ -3,31 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="82b8ad60-b1ce-4c4e-979a-c39c1c474dc5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Report.txt" afterPath="$PROJECT_DIR$/Report.txt" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Dao/OrderDAO.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Dao/OrderDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonAddComanda_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonAddComanda_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonFinishComanda_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonFinishComanda_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonIstoric_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonIstoric_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonReport_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonReport_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonUpdateUserDetails_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ButtonUpdateUserDetails_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ClickProducts_Listener.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController$ClickProducts_Listener.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Logic/MainController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/Models/Order.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/Models/Order.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/IstoricView$1.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/IstoricView$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/IstoricView.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/IstoricView.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView$1.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView$2.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView.class" afterPath="$PROJECT_DIR$/out/production/Food Delivery/View/UserView.class" />
-      <change beforePath="$PROJECT_DIR$/src/Bll/ProductValidators.java" afterPath="$PROJECT_DIR$/src/Bll/ProductValidators.java" />
-      <change beforePath="$PROJECT_DIR$/src/Bll/UserValidators.java" afterPath="$PROJECT_DIR$/src/Bll/UserValidators.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/OrderDAO.java" afterPath="$PROJECT_DIR$/src/Dao/OrderDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/UserDAO.java" afterPath="$PROJECT_DIR$/src/Dao/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/MainController.java" afterPath="$PROJECT_DIR$/src/Logic/MainController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Order.java" afterPath="$PROJECT_DIR$/src/Models/Order.java" />
-      <change beforePath="$PROJECT_DIR$/src/Validators/QuantityValidator.java" afterPath="$PROJECT_DIR$/src/Validators/QuantityValidator.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/AdminView.java" afterPath="$PROJECT_DIR$/src/View/AdminView.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/IstoricView.java" afterPath="$PROJECT_DIR$/src/View/IstoricView.java" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserView.java" afterPath="$PROJECT_DIR$/src/View/UserView.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,158 +23,6 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1151">
-              <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#securePassword#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonReport_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#CreateNewAccount_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#SignUp_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="e#6355#6356#0" expanded="true" />
-                <element signature="e#6410#6411#0" expanded="true" />
-                <element signature="class#ButtonUpdateDetails_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="e#6596#6597#0" expanded="true" />
-                <element signature="e#6651#6652#0" expanded="true" />
-                <element signature="class#SignIn_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ClickUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="e#8643#8644#0" expanded="true" />
-                <element signature="e#8692#8693#0" expanded="true" />
-                <element signature="class#ClickProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="e#9208#9209#0" expanded="true" />
-                <element signature="e#9260#9261#0" expanded="true" />
-                <element signature="class#ButtonAddUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonUpdateUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonDeleteUser_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonAddProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonUpdateProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonDeleteProduct_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonAddComanda_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonFinishComanda_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ButtonIstoric_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="class#ClickProducts_Listener#0;class#MainController#0" expanded="false" />
-                <element signature="e#21053#21054#0" expanded="true" />
-                <element signature="e#21104#21105#0" expanded="true" />
-                <element signature="class#ButtonUpdateUserDetails_Listener#0;class#MainController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Validators/EmailValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NumeEmptyValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Validators/NumeEmptyValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="10" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasswordEmptyValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Validators/PasswordEmptyValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/AdminView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-224">
-              <caret line="305" column="135" lean-forward="false" selection-start-line="305" selection-start-column="135" selection-end-line="305" selection-end-column="135" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuantityValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Validators/QuantityValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/UserView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserValidators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bll/UserValidators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-              <folding>
-                <element signature="e#488#489#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductValidators.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bll/ProductValidators.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-              <folding>
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Dao/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="61" column="47" lean-forward="false" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-              <folding>
-                <marker date="1522761310252" expanded="true" signature="527:602" ph="INSERT INTO user... " />
-                <marker date="1522761310252" expanded="true" signature="660:707" ph="SELECT * FRO... user" />
-                <marker date="1522761310252" expanded="true" signature="769:794" ph="SELECT * FRO... user" />
-                <marker date="1522761310252" expanded="true" signature="769:803" ph="SELECT * FRO... user" />
-                <marker date="1522761310252" expanded="true" signature="863:903" ph="DELETE FROM user... " />
-                <marker date="1522761310252" expanded="true" signature="963:1036" ph="UPDATE user... " />
-                <marker date="1522761310252" expanded="true" signature="1100:1155" ph="UPDATE user... " />
-                <marker date="1522761310252" expanded="true" signature="1216:1234" ph="SELECT * FRO... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -311,10 +134,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -383,13 +202,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -540,11 +363,13 @@
       <workItem from="1522687266243" duration="6573000" />
       <workItem from="1522708202479" duration="4857000" />
       <workItem from="1522758681749" duration="10131000" />
+      <workItem from="1522886057849" duration="931000" />
+      <workItem from="1522927868887" duration="663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128530000" />
+    <option name="totallyTimeSpent" value="130124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -562,7 +387,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2035139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -591,31 +416,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Bll/UserBLL.java" />
-    <entry file="file://$PROJECT_DIR$/src/Bll/OrderBLL.java" />
-    <entry file="file://$PROJECT_DIR$/src/Bll/ProductBLL.java" />
-    <entry file="file://$PROJECT_DIR$/src/Connection/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bll/CosBLL.java" />
-    <entry file="file://$PROJECT_DIR$/../Java/Tema03/src/Bll/ProductOrderBLL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/LoginView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14">
@@ -649,10 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <marker date="1522590066974" expanded="true" signature="387:424" ph="SELECT * FRO... istoric" />
-            <marker date="1522590066974" expanded="true" signature="484:541" ph="INSERT INTO istoric... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,13 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1522589896074" expanded="true" signature="552:621" ph="INSERT INTO ProductOrder... " />
-            <marker date="1522589896074" expanded="true" signature="686:719" ph="SELECT * FRO... ProductOrder" />
-            <marker date="1522589896074" expanded="true" signature="780:794" ph="SELECT * FRO... ProductOrder" />
-            <marker date="1522589896074" expanded="true" signature="780:798" ph="SELECT * FRO... coss" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -674,10 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1522575936642" expanded="true" signature="445:493" ph="SELECT * FRO... admin" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,14 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="19" column="21" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="e#378#379#0" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#503#504#0" expanded="false" />
-            <element signature="e#554#555#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,12 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#464#465#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,12 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="e#653#654#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,24 +631,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
+        <state relative-caret-position="833">
           <caret line="61" column="47" lean-forward="false" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-          <folding>
-            <marker date="1522761310252" expanded="true" signature="527:602" ph="INSERT INTO user... " />
-            <marker date="1522761310252" expanded="true" signature="660:707" ph="SELECT * FRO... user" />
-            <marker date="1522761310252" expanded="true" signature="769:794" ph="SELECT * FRO... user" />
-            <marker date="1522761310252" expanded="true" signature="769:803" ph="SELECT * FRO... user" />
-            <marker date="1522761310252" expanded="true" signature="863:903" ph="DELETE FROM user... " />
-            <marker date="1522761310252" expanded="true" signature="963:1036" ph="UPDATE user... " />
-            <marker date="1522761310252" expanded="true" signature="1100:1155" ph="UPDATE user... " />
-            <marker date="1522761310252" expanded="true" signature="1216:1234" ph="SELECT * FRO... user" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/UserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="1496">
           <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
           <folding />
         </state>
@@ -900,7 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bll/ProductValidators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="476">
           <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
             <element signature="e#1031#1032#0" expanded="true" />
@@ -911,7 +665,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bll/UserValidators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="238">
           <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding>
             <element signature="e#488#489#0" expanded="true" />
@@ -924,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1151">
+        <state relative-caret-position="17">
           <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -980,16 +734,583 @@
     <entry file="file://$PROJECT_DIR$/src/Validators/PasswordEmptyValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">Bll</node>
+            <node x="" y="">Start</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">Logic</node>
+            <node x="" y="">images</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">Connection</node>
+            <node x="" y="">resources</node>
+            <node x="" y="">View</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">Dao</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">Validators</node>
+            <node x="" y="">Models</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">groovyjarjarantlr</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="281.0" y="274.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Bll.AdminValidators">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Bll.AdminValidators</OriginalElement>
+          <nodes>
+            <node x="" y="">Bll.AdminValidators</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="68.0" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Models.Istoric">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Models.Istoric</OriginalElement>
+          <nodes>
+            <node x="" y="">Models.Cos</node>
+            <node x="" y="">Dao.ProductDAO</node>
+            <node x="" y="">Dao.UserDAO</node>
+            <node x="" y="">Validators.PriceValidator</node>
+            <node x="" y="">java.beans.JavaBean</node>
+            <node x="" y="">Bll.IstoricValidators</node>
+            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="" y="">Connection.ConnectionFactory</node>
+            <node x="" y="">javax.swing.SwingContainer</node>
+            <node x="" y="">Models.Order</node>
+            <node x="" y="">Start.Main</node>
+            <node x="" y="">Models.Istoric</node>
+            <node x="" y="">Dao.AdminDAO</node>
+            <node x="" y="">Models.User</node>
+            <node x="" y="">java.awt.image.ImageObserver</node>
+            <node x="" y="">Dao.IstoricDAO</node>
+            <node x="" y="">Bll.AdminValidators</node>
+            <node x="" y="">Validators.NumeEmptyValidator</node>
+            <node x="" y="">java.awt.Container</node>
+            <node x="" y="">javax.swing.JFrame</node>
+            <node x="" y="">View.AdminView</node>
+            <node x="" y="">View.CreateUserView</node>
+            <node x="" y="">Validators.AddressEmptyValidator</node>
+            <node x="" y="">java.awt.Frame</node>
+            <node x="" y="">Bll.OrderValidators</node>
+            <node x="" y="">java.awt.Window</node>
+            <node x="" y="">Dao.OrderDAO</node>
+            <node x="" y="">Bll.ProductValidators</node>
+            <node x="" y="">Logic.MainController</node>
+            <node x="" y="">View.LoginView</node>
+            <node x="" y="">java.awt.MenuContainer</node>
+            <node x="" y="">javax.swing.RootPaneContainer</node>
+            <node x="" y="">javax.accessibility.Accessible</node>
+            <node x="" y="">java.awt.Component</node>
+            <node x="" y="">Validators.Validator</node>
+            <node x="" y="">Validators.EmailValidator</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">Dao.CosDAO</node>
+            <node x="" y="">Models.Product</node>
+            <node x="" y="">Validators.QuantityValidator</node>
+            <node x="" y="">View.UpdateUserView</node>
+            <node x="" y="">View.IstoricView</node>
+            <node x="" y="">Bll.CosValidators</node>
+            <node x="" y="">Bll.UserValidators</node>
+            <node x="" y="">View.UserView</node>
+            <node x="" y="">javax.swing.WindowConstants</node>
+            <node x="" y="">Models.Admin</node>
+            <node x="" y="">Validators.PasswordEmptyValidator</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7830039525691699" x="515.0" y="694.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/D:/University Stuff/Food Delivery/src/Bll;D:/University Stuff/Food Delivery/src/Connection;D:/University Stuff/Food Delivery/src/Dao;D:/University Stuff/Food Delivery/src/Logic;D:/University Stuff/Food Delivery/src/Models;D:/University Stuff/Food Delivery/src/Start;D:/University Stuff/Food Delivery/src/Validators;D:/University Stuff/Food Delivery/src/View;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Bll;D:/University Stuff/Food Delivery/src/Connection;D:/University Stuff/Food Delivery/src/Dao;D:/University Stuff/Food Delivery/src/Logic;D:/University Stuff/Food Delivery/src/Models;D:/University Stuff/Food Delivery/src/Start;D:/University Stuff/Food Delivery/src/Validators;D:/University Stuff/Food Delivery/src/View;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="544.0" y="295.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Bll.ProductValidators">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Bll.ProductValidators</OriginalElement>
+          <nodes>
+            <node x="" y="">Models.Cos</node>
+            <node x="" y="">Dao.UserDAO</node>
+            <node x="" y="">Dao.ProductDAO</node>
+            <node x="" y="">Bll.OrderValidators</node>
+            <node x="" y="">Dao.OrderDAO</node>
+            <node x="" y="">Bll.IstoricValidators</node>
+            <node x="" y="">Bll.ProductValidators</node>
+            <node x="" y="">Connection.ConnectionFactory</node>
+            <node x="" y="">Models.Order</node>
+            <node x="" y="">Start.Main</node>
+            <node x="" y="">Models.Istoric</node>
+            <node x="" y="">Models.User</node>
+            <node x="" y="">Dao.AdminDAO</node>
+            <node x="" y="">Dao.IstoricDAO</node>
+            <node x="" y="">Dao.CosDAO</node>
+            <node x="" y="">Models.Product</node>
+            <node x="" y="">Bll.AdminValidators</node>
+            <node x="" y="">Bll.CosValidators</node>
+            <node x="" y="">Bll.UserValidators</node>
+            <node x="" y="">Logic</node>
+            <node x="" y="">Models.Admin</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="436.0" y="124.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Logic">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Logic</OriginalElement>
+          <nodes>
+            <node x="" y="">Dao</node>
+            <node x="" y="">Bll</node>
+            <node x="" y="">Start</node>
+            <node x="" y="">Connection</node>
+            <node x="" y="">Validators</node>
+            <node x="" y="">Logic.MainController</node>
+            <node x="" y="">Models</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="64.0" y="75.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/AdminView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
+        <state relative-caret-position="4420">
           <caret line="305" column="135" lean-forward="false" selection-start-line="305" selection-start-column="135" selection-end-line="305" selection-end-column="135" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Validators.AddressEmptyValidator">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Validators.AddressEmptyValidator</OriginalElement>
+          <nodes>
+            <node x="161.20000000000005" y="0.0">Models.Cos</node>
+            <node x="1649.7313650793644" y="269.0">Dao.ProductDAO</node>
+            <node x="996.7313650793644" y="269.0">Dao.UserDAO</node>
+            <node x="1784.7313650793644" y="269.0">Validators.PriceValidator</node>
+            <node x="322.4927817460316" y="438.0">Bll.IstoricValidators</node>
+            <node x="397.2999999999999" y="0.0">Connection.ConnectionFactory</node>
+            <node x="568.8416666666665" y="0.0">Models.Order</node>
+            <node x="297.29999999999995" y="0.0">Models.Istoric</node>
+            <node x="26.5" y="591.0">Start.Main</node>
+            <node x="30.5" y="269.0">Dao.AdminDAO</node>
+            <node x="1401.7952777777773" y="0.0">Models.User</node>
+            <node x="335.99278174603137" y="269.0">Dao.IstoricDAO</node>
+            <node x="26.492781746031596" y="438.0">Bll.AdminValidators</node>
+            <node x="1256.7313650793644" y="269.0">Validators.NumeEmptyValidator</node>
+            <node x="612.8166666666666" y="269.0">Validators.AddressEmptyValidator</node>
+            <node x="604.8677817460314" y="438.0">Bll.OrderValidators</node>
+            <node x="477.81666666666655" y="269.0">Dao.OrderDAO</node>
+            <node x="1694.25667063492" y="438.0">Bll.ProductValidators</node>
+            <node x="0.0" y="512.0">Logic.MainController</node>
+            <node x="903.289821428571" y="0.0">Validators.Validator</node>
+            <node x="1112.7313650793644" y="269.0">Validators.EmailValidator</node>
+            <node x="185.70000000000005" y="269.0">Dao.CosDAO</node>
+            <node x="1921.3637896825394" y="0.0">Models.Product</node>
+            <node x="1925.7313650793644" y="269.0">Validators.QuantityValidator</node>
+            <node x="182.4927817460316" y="438.0">Bll.CosValidators</node>
+            <node x="1114.75667063492" y="438.0">Bll.UserValidators</node>
+            <node x="0.0" y="0.0">Models.Admin</node>
+            <node x="1438.7313650793644" y="269.0">Validators.PasswordEmptyValidator</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Bll.ProductValidators" target="Validators.QuantityValidator">
+              <point x="20.28571428571422" y="-14.5" />
+              <point x="1785.5423849206343" y="398.0" />
+              <point x="1996.2313650793644" y="398.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.AdminValidators" target="Validators.Validator">
+              <point x="54.40000000000009" y="-14.5" />
+              <point x="148.8927817460317" y="358.0" />
+              <point x="805.3166666666666" y="358.0" />
+              <point x="805.3166666666666" y="169.0" />
+              <point x="916.4842658730154" y="169.0" />
+              <point x="-34.30555555555566" y="14.5" />
+            </edge>
+            <edge source="Bll.OrderValidators" target="Validators.AddressEmptyValidator">
+              <point x="10.833333333333258" y="-14.5" />
+              <point x="680.7011150793646" y="338.0" />
+              <point x="698.3166666666666" y="338.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Dao.OrderDAO" target="Models.Order">
+              <point x="0.0" y="-14.5" />
+              <point x="529.3166666666666" y="219.0" />
+              <point x="576.6416666666664" y="219.0" />
+              <point x="-31.200000000000045" y="14.5" />
+            </edge>
+            <edge source="Validators.QuantityValidator" target="Validators.Validator">
+              <point x="-35.25" y="-14.5" />
+              <point x="1960.9813650793644" y="49.0" />
+              <point x="995.6509325396821" y="49.0" />
+              <point x="44.861111111111086" y="14.5" />
+            </edge>
+            <edge source="Bll.CosValidators" target="Models.Cos">
+              <point x="-48.0" y="-14.5" />
+              <point x="194.4927817460316" y="338.0" />
+              <point x="164.20000000000005" y="338.0" />
+              <point x="164.20000000000005" y="219.0" />
+              <point x="169.70000000000005" y="219.0" />
+              <point x="-25.5" y="14.5" />
+            </edge>
+            <edge source="Validators.AddressEmptyValidator" target="Models.Order">
+              <point x="-42.75" y="-14.5" />
+              <point x="655.5666666666666" y="249.0" />
+              <point x="639.0416666666665" y="249.0" />
+              <point x="31.200000000000045" y="14.5" />
+            </edge>
+            <edge source="Bll.ProductValidators" target="Models.Product">
+              <point x="60.85714285714289" y="-14.5" />
+              <point x="1826.113813492063" y="418.0" />
+              <point x="2088.2313650793644" y="418.0" />
+              <point x="2088.2313650793644" y="229.0" />
+              <point x="2003.8637896825394" y="229.0" />
+              <point x="37.5" y="14.5" />
+            </edge>
+            <edge source="Bll.OrderValidators" target="Models.Order">
+              <point x="-32.5" y="-14.5" />
+              <point x="637.3677817460314" y="328.0" />
+              <point x="591.3166666666666" y="328.0" />
+              <point x="591.3166666666666" y="239.0" />
+              <point x="607.8416666666665" y="239.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Models.User">
+              <point x="38.4375" y="-14.5" />
+              <point x="1214.69417063492" y="408.0" />
+              <point x="1628.2313650793644" y="408.0" />
+              <point x="1628.2313650793644" y="89.0" />
+              <point x="1457.5809920634915" y="89.0" />
+              <point x="20.285714285714334" y="14.5" />
+            </edge>
+            <edge source="Validators.PasswordEmptyValidator" target="Validators.Validator">
+              <point x="-44.75" y="-14.5" />
+              <point x="1483.4813650793644" y="109.0" />
+              <point x="985.0953769841267" y="109.0" />
+              <point x="34.30555555555566" y="14.5" />
+            </edge>
+            <edge source="Dao.CosDAO" target="Models.Cos">
+              <point x="-31.0" y="-14.5" />
+              <point x="201.20000000000005" y="219.0" />
+              <point x="203.70000000000005" y="219.0" />
+              <point x="8.5" y="14.5" />
+            </edge>
+            <edge source="Dao.UserDAO" target="Models.User">
+              <point x="0.0" y="-14.5" />
+              <point x="1044.7313650793644" y="219.0" />
+              <point x="1406.8667063492057" y="219.0" />
+              <point x="-30.42857142857143" y="14.5" />
+            </edge>
+            <edge source="Bll.ProductValidators" target="Validators.PriceValidator">
+              <point x="0.0" y="-14.5" />
+              <point x="1765.25667063492" y="388.0" />
+              <point x="1845.2313650793644" y="388.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Dao.ProductDAO" target="Models.Product">
+              <point x="0.0" y="-14.5" />
+              <point x="1707.2313650793644" y="229.0" />
+              <point x="1928.8637896825394" y="229.0" />
+              <point x="-37.5" y="14.5" />
+            </edge>
+            <edge source="Validators.AddressEmptyValidator" target="Validators.Validator">
+              <point x="42.75" y="-14.5" />
+              <point x="741.0666666666666" y="149.0" />
+              <point x="905.92871031746" y="149.0" />
+              <point x="-44.861111111111086" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Validators.NumeEmptyValidator">
+              <point x="7.6875" y="-14.5" />
+              <point x="1183.94417063492" y="388.0" />
+              <point x="1337.7313650793644" y="388.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.CosValidators" target="Validators.Validator">
+              <point x="48.0" y="-14.5" />
+              <point x="290.4927817460316" y="378.0" />
+              <point x="821.5944444444444" y="378.0" />
+              <point x="821.5944444444444" y="189.0" />
+              <point x="927.039821428571" y="189.0" />
+              <point x="-23.75" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Validators.PasswordEmptyValidator">
+              <point x="23.0625" y="-14.5" />
+              <point x="1199.31917063492" y="398.0" />
+              <point x="1528.2313650793644" y="398.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.CosValidators" target="Dao.CosDAO">
+              <point x="0.0" y="-14.5" />
+              <point x="242.4927817460316" y="338.0" />
+              <point x="232.20000000000005" y="338.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Dao.IstoricDAO" target="Models.Istoric">
+              <point x="0.0" y="-14.5" />
+              <point x="388.49278174603137" y="219.0" />
+              <point x="367.29999999999995" y="219.0" />
+              <point x="30.0" y="14.5" />
+            </edge>
+            <edge source="Validators.EmailValidator" target="Validators.Validator">
+              <point x="-31.0" y="-14.5" />
+              <point x="1143.7313650793644" y="129.0" />
+              <point x="974.539821428571" y="129.0" />
+              <point x="23.75" y="14.5" />
+            </edge>
+            <edge source="Bll.OrderValidators" target="Validators.Validator">
+              <point x="54.16666666666674" y="-14.5" />
+              <point x="724.0344484126981" y="418.0" />
+              <point x="889.0870198412692" y="418.0" />
+              <point x="889.0870198412692" y="229.0" />
+              <point x="948.1509325396821" y="229.0" />
+              <point x="-2.638888888888914" y="14.5" />
+            </edge>
+            <edge source="Validators.QuantityValidator" target="Models.Product">
+              <point x="35.25" y="-14.5" />
+              <point x="2031.4813650793644" y="249.0" />
+              <point x="1973.8637896825394" y="249.0" />
+              <point x="7.5" y="14.5" />
+            </edge>
+            <edge source="Bll.IstoricValidators" target="Dao.IstoricDAO">
+              <point x="-2.2737367544323206E-13" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.ProductValidators" target="Validators.Validator">
+              <point x="-60.85714285714289" y="-14.5" />
+              <point x="1704.3995277777772" y="378.0" />
+              <point x="975.2313650793644" y="378.0" />
+              <point x="975.2313650793644" y="249.0" />
+              <point x="963.9842658730154" y="249.0" />
+              <point x="13.194444444444343" y="14.5" />
+            </edge>
+            <edge source="Validators.EmailValidator" target="Models.User">
+              <point x="31.0" y="-14.5" />
+              <point x="1205.7313650793644" y="239.0" />
+              <point x="1427.1524206349202" y="239.0" />
+              <point x="-10.142857142857139" y="14.5" />
+            </edge>
+            <edge source="Dao.UserDAO" target="Connection.ConnectionFactory">
+              <point x="-32.0" y="-14.5" />
+              <point x="1012.7313650793644" y="139.0" />
+              <point x="509.0499999999999" y="139.0" />
+              <point x="37.25" y="14.5" />
+            </edge>
+            <edge source="Dao.IstoricDAO" target="Connection.ConnectionFactory">
+              <point x="35.0" y="-14.5" />
+              <point x="423.49278174603137" y="249.0" />
+              <point x="459.38333333333316" y="249.0" />
+              <point x="-12.416666666666742" y="14.5" />
+            </edge>
+            <edge source="Bll.AdminValidators" target="Models.Admin">
+              <point x="-54.40000000000009" y="-14.5" />
+              <point x="40.092781746031505" y="418.0" />
+              <point x="9.0" y="418.0" />
+              <point x="9.0" y="249.0" />
+              <point x="10.5" y="249.0" />
+              <point x="-31.5" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Validators.EmailValidator">
+              <point x="-7.6875" y="-14.5" />
+              <point x="1168.56917063492" y="418.0" />
+              <point x="1174.7313650793644" y="418.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Dao.AdminDAO" target="Connection.ConnectionFactory">
+              <point x="36.33333333333326" y="-14.5" />
+              <point x="121.33333333333326" y="229.0" />
+              <point x="409.71666666666664" y="229.0" />
+              <point x="-62.08333333333326" y="14.5" />
+            </edge>
+            <edge source="Validators.NumeEmptyValidator" target="Models.User">
+              <point x="40.5" y="-14.5" />
+              <point x="1378.2313650793644" y="249.0" />
+              <point x="1437.2952777777773" y="249.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Validators.Validator">
+              <point x="-53.8125" y="-14.5" />
+              <point x="1122.44417063492" y="418.0" />
+              <point x="894.3647976190471" y="418.0" />
+              <point x="894.3647976190471" y="239.0" />
+              <point x="953.42871031746" y="239.0" />
+              <point x="2.638888888888914" y="14.5" />
+            </edge>
+            <edge source="Bll.ProductValidators" target="Dao.ProductDAO">
+              <point x="-20.285714285714334" y="-14.5" />
+              <point x="1744.9709563492056" y="358.0" />
+              <point x="1707.2313650793644" y="358.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Validators.PriceValidator" target="Validators.Validator">
+              <point x="-30.25" y="-14.5" />
+              <point x="1814.9813650793644" y="59.0" />
+              <point x="990.3731547619043" y="59.0" />
+              <point x="39.58333333333326" y="14.5" />
+            </edge>
+            <edge source="Bll.IstoricValidators" target="Validators.Validator">
+              <point x="52.799999999999955" y="-14.5" />
+              <point x="441.29278174603155" y="398.0" />
+              <point x="863.82871031746" y="398.0" />
+              <point x="863.82871031746" y="209.0" />
+              <point x="937.5953769841267" y="209.0" />
+              <point x="-13.194444444444343" y="14.5" />
+            </edge>
+            <edge source="Dao.ProductDAO" target="Connection.ConnectionFactory">
+              <point x="-38.33333333333337" y="-14.5" />
+              <point x="1668.898031746031" y="69.0" />
+              <point x="533.8833333333332" y="69.0" />
+              <point x="62.08333333333326" y="14.5" />
+            </edge>
+            <edge source="Start.Main" target="Logic.MainController">
+              <point x="-18.75" y="-14.5" />
+              <point x="45.25" y="566.0" />
+              <point x="32.0" y="566.0" />
+              <point x="-32.0" y="14.5" />
+            </edge>
+            <edge source="Dao.AdminDAO" target="Models.Admin">
+              <point x="0.0" y="-14.5" />
+              <point x="85.0" y="249.0" />
+              <point x="73.5" y="249.0" />
+              <point x="31.5" y="14.5" />
+            </edge>
+            <edge source="Bll.UserValidators" target="Dao.UserDAO">
+              <point x="-23.0625" y="-14.5" />
+              <point x="1153.19417063492" y="398.0" />
+              <point x="1044.7313650793644" y="398.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Validators.PriceValidator" target="Models.Product">
+              <point x="30.25" y="-14.5" />
+              <point x="1875.4813650793644" y="249.0" />
+              <point x="1958.8637896825394" y="249.0" />
+              <point x="-7.5" y="14.5" />
+            </edge>
+            <edge source="Bll.AdminValidators" target="Dao.AdminDAO">
+              <point x="0.0" y="-14.5" />
+              <point x="94.4927817460316" y="418.0" />
+              <point x="85.0" y="418.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Bll.OrderValidators" target="Dao.OrderDAO">
+              <point x="-54.16666666666674" y="-14.5" />
+              <point x="615.7011150793646" y="338.0" />
+              <point x="529.3166666666666" y="338.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Validators.PasswordEmptyValidator" target="Models.User">
+              <point x="44.75" y="-14.5" />
+              <point x="1572.9813650793644" y="99.0" />
+              <point x="1447.4381349206344" y="99.0" />
+              <point x="10.142857142857167" y="14.5" />
+            </edge>
+            <edge source="Bll.IstoricValidators" target="Models.Istoric">
+              <point x="-26.40000000000032" y="-14.5" />
+              <point x="362.0927817460313" y="328.0" />
+              <point x="315.79999999999995" y="328.0" />
+              <point x="315.79999999999995" y="219.0" />
+              <point x="327.29999999999995" y="219.0" />
+              <point x="-10.0" y="14.5" />
+            </edge>
+            <edge source="Dao.OrderDAO" target="Connection.ConnectionFactory">
+              <point x="-34.33333333333326" y="-14.5" />
+              <point x="494.9833333333333" y="249.0" />
+              <point x="484.21666666666664" y="249.0" />
+              <point x="12.416666666666742" y="14.5" />
+            </edge>
+            <edge source="Dao.CosDAO" target="Connection.ConnectionFactory">
+              <point x="31.0" y="-14.5" />
+              <point x="263.20000000000005" y="239.0" />
+              <point x="434.5499999999999" y="239.0" />
+              <point x="-37.25" y="14.5" />
+            </edge>
+            <edge source="Validators.NumeEmptyValidator" target="Validators.Validator">
+              <point x="-40.5" y="-14.5" />
+              <point x="1297.2313650793644" y="119.0" />
+              <point x="979.8175992063489" y="119.0" />
+              <point x="29.02777777777783" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="1032.0" y="190.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
