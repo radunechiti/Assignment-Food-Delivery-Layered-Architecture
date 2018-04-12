@@ -1,143 +1,17 @@
 User details
-Name: C
-Email: c@c.com
-Loyal: false
-Activ: false
+Name: AA
+Email: aa@a.com
+Loyal: true
+Activ: true
 
-Comanda nr: 13
-Adresa: fsdfsdfg
+Comanda nr: 1
+Adresa: jhgjdfs
 Payment: Cash
-Total: 265
-Date: 2018-04-03 16:07:17.0
+Total: 251
+Date: null
 
-Comanda nr: 14
-Adresa: jshgdlksa
+Comanda nr: 2
+Adresa: jhgjdfs
 Payment: Cash
-Total: 1696
-Date: 2018-04-03 16:07:52.0
-
-Comanda nr: 15
-Adresa: fvdsgfsg
-Payment: Cash
-Total: 636
-Date: 2018-04-03 16:55:20.0
-
-Comanda nr: 16
-Adresa: Adio
-Payment: Cash
-Total: 212
-Date: 2018-04-03 16:57:32.0
-
-Comanda nr: 17
-Adresa: Adio1
-Payment: Cash
-Total: 530
-Date: 2018-04-03 16:57:55.0
-
-Comanda nr: 18
-Adresa: Adio1
-Payment: Cash
-Total: 212
-Date: 2018-04-03 16:58:01.0
-
-Comanda nr: 19
-Adresa: fadfsdgf
-Payment: Cash
-Total: 212
-Date: 2018-04-03 16:59:32.0
-
-Comanda nr: 20
-Adresa: Adio2
-Payment: Cash
-Total: 106
-Date: 2018-04-03 16:59:41.0
-
-Comanda nr: 21
-Adresa: nkjzvxcvlk
-Payment: Cash
-Total: 106
-Date: 2018-04-03 17:00:02.0
-
-Comanda nr: 22
-Adresa: Sdio
-Payment: Cash
-Total: 212
-Date: 2018-04-03 17:07:15.0
-
-Comanda nr: 23
-Adresa: jhhcvjh
-Payment: Cash
-Total: 106
-Date: 2018-04-03 17:07:25.0
-
-Comanda nr: 24
-Adresa: Asta
-Payment: Cash
-Total: 212
-Date: 2018-04-03 17:08:21.0
-
-Comanda nr: 25
-Adresa: dafd
-Payment: Cash
-Total: 106
-Date: 2018-04-03 17:08:42.0
-
-Comanda nr: 26
-Adresa: dajgfksl
-Payment: Cash
-Total: 212
-Date: 2018-04-03 17:12:01.0
-
-Comanda nr: 27
-Adresa: vsdgvfdg
-Payment: Cash
-Total: 106
-Date: 2018-04-03 17:12:06.0
-
-Comanda nr: 28
-Adresa: fdsfsdfs
-Payment: Cash
-Total: 212
-Date: 2018-04-03 17:14:07.0
-
-Comanda nr: 29
-Adresa: ADR
-Payment: Cash
-Total: 318
-Date: 2018-04-03 17:54:01.0
-
-Comanda nr: 30
-Adresa: ADR
-Payment: Cash
-Total: 318
-Date: 2018-04-03 17:54:01.0
-
-Comanda nr: 31
-Adresa: Adresa la mine
-Payment: Cash
-Total: 265
-Date: 2018-04-03 18:03:00.0
-
-Comanda nr: 32
-Adresa: Adresa la mine
-Payment: Cash
-Total: 265
-Date: 2018-04-03 18:03:00.0
-
-Comanda nr: 33
-Adresa: Acolo
-Payment: Cash
-Total: 424
-Date: 2018-04-03 18:05:39.0
-
-Comanda nr: 34
-Adresa: Acolo
-Payment: Cash
-Total: 424
-Date: 2018-04-03 18:05:39.0
-
-Comanda nr: 35
-Adresa: Undeva
-Payment: Cash
-Total: 159
-Date: 2018-04-03 18:08:22.0
+Total: 1762
+Date: null

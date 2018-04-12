@@ -1,5 +1,6 @@
 package Start;
 
+import Connection.ConnectionFactory;
 import Logic.MainController;
 import View.*;
 
@@ -15,5 +16,6 @@ public class Main {
         IstoricView istoricView = new IstoricView();
         UpdateUserView updateUserView = new UpdateUserView();
         MainController mainController = new MainController(loginView,adminView,createUserView,userView, istoricView, updateUserView);
+        ConnectionFactory c = new ConnectionFactory();
     }
 }
